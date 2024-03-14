@@ -12,6 +12,7 @@ Yes, at some point I will read all of CLRS before I do 3121 but the objective is
 
 ## A man, a plan, a canal
 Step 1 of my algorithms journey is learn a basic set of useful tools/patterns so I have more than a unsharpened teaspoon in my toolbox to solve problems with.
+- Trying to close the gap between what I know about and what I can solve on the spot
 
 Spend 90 mins a day, barring one day for rest. Go find time to do this.
 
