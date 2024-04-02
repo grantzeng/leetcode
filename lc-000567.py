@@ -262,7 +262,8 @@ class Solution:
         return False
         """
 
-s1 = 'ab'
-s2 = 'eidbaooo'
+if __name__ == '__main__':
+    s1 = 'ab'
+    s2 = 'eidbaooo'
 
-print(Solution().checkInclusion(s1, s2))
+    print(Solution().checkInclusion(s1, s2))

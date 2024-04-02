@@ -4,14 +4,13 @@ class Solution:
         #   Optimized solution using 26-element long "array" instead of a hash table
         #   - the C-style solution
         #
-        #
         
-        targ, wind = [0] * 26, [0] * 26
-        anagram_idxs = []
+        freq = [] * 26
+        idxs = []
 
         # TODO: Come back to this
 
-        return anagram_idxs
+        return idxs
 
         #
         #   Trying to come up with a solution where we update the window frequency table each step
