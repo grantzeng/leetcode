@@ -4,7 +4,7 @@ class Solution:
         #
         #
         #   Initial attempt: recursion with memoisation
-        #   - This solution is broken because it's not counting unique characters properly
+        #
         #   - Also you didn't read the instructions which asked you to write a separate function...
         #
         #   Time: O(C(|s|, 2) * O(|s|)) which is O(|s|^3) or cubic worst case brute forcing
@@ -15,14 +15,20 @@ class Solution:
         #
         #   If a string is length n, then there's C(n, 2) = n(n - 1)/2 = O(n^2) substrings
         #
+
+        #   Process journal:
+        #   - Initially counted number distinct characters (wrong!) 103 on LEETCODE
+        #   - but really we wanted characters with no repetition!: 90 on 'LEETCODE'
+        #   -
+        from collections import Counter
         memo = {}
         def recurse(substring, k):
+
             if substring in memo or not substring:
                 # Explored this branch already
                 return
-            print(substring)
-            memo[substring] = len(set(substring))
-
+            # print(substring)
+            memo[substring] = sum(count for count in Counter(substring).values() if count == 1)
             # Recurse on sliding window of size k - 1
             n = len(substring)
             for i in range(n - (k - 1) + 1):
@@ -30,7 +36,7 @@ class Solution:
 
         recurse(s, len(s))
 
-        print(memo)
+        # print(memo)
 
         return sum(memo.values())
 
