@@ -2,6 +2,34 @@ class Solution:
     def checkInclusion(self, s1: str, s2: str) -> bool:
 
         #
+        #   To be honest this is the obviously correct/maintainable solution.
+        #   - You could fiddle with the array representation of the frequency table if you wanted to
+        #
+        #  Time: O(|s1| + |s2|) due to build cost for frequency tables
+        #  Space: O(1) since number of key-value pairs in each table is upper bounded by 26
+        #
+        from collections import Counter
+
+        if len(s1) > len(s2): return False
+        win_size = len(s1)
+
+        targ = Counter(s1)
+        wind = Counter(s2[:win_size])
+
+        idxs = []
+        for i in range(len(s2) - win_size):
+            if targ == wind:
+                return True
+
+            wind[s2[i]] -= 1
+            wind[s2[i + win_size]] += 1
+
+        return targ == wind
+
+
+
+
+        #
         #   Try reimplement the optimized solution but make it readable
         #   - But I think this doesn't work well because inherently you're working at the level of
         #     an array and not at some higher abstraction. So the code is just not going to look nice
