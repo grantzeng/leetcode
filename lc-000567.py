@@ -16,7 +16,6 @@ class Solution:
         targ = Counter(s1)
         wind = Counter(s2[:win_size])
 
-        idxs = []
         for i in range(len(s2) - win_size):
             if targ == wind:
                 return True
