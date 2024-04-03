@@ -21,7 +21,7 @@ The notes are about grokking the algorithm involved, I've put all the time and s
 
 | Practice & apply | Retrospection notes |
 | --- | --- |
-| https://leetcode.com/problems/substrings-of-size-three-with-distinct-characters/description/ |  |
+| https://leetcode.com/problems/substrings-of-size-three-with-distinct-characters/description/ | Straightforward, just watch out for off-by-one errors with sliding the window |
 | https://leetcode.com/problems/minimum-size-subarray-sum/description/?envType=list&envId=xlep8di5 |  |
 | https://leetcode.com/problems/longest-repeating-character-replacement/description/?envType=list&envId=xlep8di5 |  |
 | https://leetcode.com/problems/longest-substring-without-repeating-characters/description/ |  |
