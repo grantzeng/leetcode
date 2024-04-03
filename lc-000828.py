@@ -1,9 +1,39 @@
 class Solution:
     def uniqueLetterString(self, s: str) -> int:
 
+
+        #
+        #   Try bruteforce solution to recursively traverse all substrings
+        #
+
+        # from collections import Counter
+
+        # count = 0
+
+
+        # return count
+
+        #
+        #   Try bruteforce iterative solution checking all C(n + 1,2) substrings (it's n + 1 because
+        #   string slicing is not inclusive of end!)
+        #
+        #   Time: O(n^3) since it's O(C(n + 1, 2) * O(n)) - counting costs O(n) for each substring
+        #   Space: O(1)
+        # from collections import Counter
+        # n = len(s)
+        # count = 0
+        # for i in range(n):
+        #     for j in range(i, n):
+        #         substring = s[i: j + 1]
+        #         print(substring)
+        #         #count += sum(count for count in Counter(substring).values() if count == 1)
+
+        # return count
+
+
         #
         #
-        #   Initial attempt: recursion with memoisation
+        #   Initial attempt: recursion with memoisation (INCORRECT SOLUTION)
         #
         #   - Also you didn't read the instructions which asked you to write a separate function...
         #
@@ -16,18 +46,22 @@ class Solution:
         #   If a string is length n, then there's C(n, 2) = n(n - 1)/2 = O(n^2) substrings
         #
 
+
+        #
         #   Process journal:
         #   - Initially counted number distinct characters (wrong!) 103 on LEETCODE
         #   - but really we wanted characters with no repetition!: 90 on 'LEETCODE'
-        #   -
+        #
+        #   The problem here is you didn't really get what the problem was was asking for
+        #
         from collections import Counter
         memo = {}
         def recurse(substring, k):
 
-            if substring in memo or not substring:
+            if not substring:
                 # Explored this branch already
                 return
-            # print(substring)
+            print(substring)
             memo[substring] = sum(count for count in Counter(substring).values() if count == 1)
             # Recurse on sliding window of size k - 1
             n = len(substring)

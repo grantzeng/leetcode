@@ -11,3 +11,9 @@ Sliding window:
 Problem you had was how to maintain the frequency table when sliding along, the window itself wasn't hard to see.
 
 I've seen this trick where they use a 26 long array to be the frequency table rather than an explicit hashmap.
+
+
+# 2024-04-03
+
+### 828
+Really stuck on this one, I'm not sure why my recursive attempt bruteforce searching all substrings isn't exploring all substrings?
