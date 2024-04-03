@@ -3,12 +3,36 @@ class Solution:
 
 
         #
-        #   Try bruteforce solution to recursively traverse all substrings
-        #
+        #   Reattempt at bruteforce recursive search on all substrings
+        #    - Issue with initial attempt was it was discarding substrings that
+        #      had same sequence but were in different positions
+        from collections import Counter
+        seen = set()
+        count = 0
 
-        # from collections import Counter
+        def recurse(i, j, size, s, seen):
+            nonlocal count
+            # Assume we index strings with last element exclusive
+            ss = s[i:j]
+            idx = (i, j)
 
-        # count = 0
+            if idx in seen or not ss:
+                # Substring has already been processed or is empty
+                return 0
+            print(ss)
+
+            # Add current value to count
+            count += sum(c for c in Counter(ss).values() if c == 1)
+
+            for i in range(i, j - size + 1):
+                count += recurse(i, i + size, size - 1, s, seen)
+
+            return count
+
+        n = len(s)
+        count = recurse(0, n, n, s, seen)
+        return count
+
 
 
         # return count
