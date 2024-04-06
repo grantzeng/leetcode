@@ -32,7 +32,7 @@ The notes are about grokking the algorithm involved, I've put all the time and s
 
 | Study solutions | Retrospection notes |
 | --- | --- |
-| https://leetcode.com/problems/backspace-string-compare/description/?envType=list&envId=xlem03mm |  |
+| https://leetcode.com/problems/backspace-string-compare/description/?envType=list&envId=xlem03mm | Parse from right to left to avoid having to backtrack, and write a helper function to grab next valid token. Why you might think to do in reverse order is from general principle that with string and array problems the nice solutions are always the ones that do things in a single pass. |
 | https://leetcode.com/problems/3sum/description/?envType=list&envId=xlem03mm |  |
 | https://leetcode.com/problems/sort-colors/description/?envType=list&envId=xlem03mm |  |
 | https://leetcode.com/problems/container-with-most-water/description/?envType=list&envId=xlem03mm |  |

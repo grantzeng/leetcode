@@ -6,6 +6,7 @@ class Solution:
         #   Reattempt at bruteforce recursive search on all substrings
         #    - Issue with initial attempt was it was discarding substrings that
         #      had same sequence but were in different positions
+        #
         from collections import Counter
         seen = set()
         count = 0
@@ -43,16 +44,16 @@ class Solution:
         #
         #   Time: O(n^3) since it's O(C(n + 1, 2) * O(n)) - counting costs O(n) for each substring
         #   Space: O(1)
-        # from collections import Counter
-        # n = len(s)
-        # count = 0
-        # for i in range(n):
-        #     for j in range(i, n):
-        #         substring = s[i: j + 1]
-        #         print(substring)
-        #         #count += sum(count for count in Counter(substring).values() if count == 1)
+        from collections import Counter
+        n = len(s)
+        count = 0
+        for i in range(n):
+            for j in range(i, n):
+                substring = s[i: j + 1]
+                print(substring)
+                #count += sum(count for count in Counter(substring).values() if count == 1)
 
-        # return count
+        return count
 
 
         #
@@ -77,6 +78,7 @@ class Solution:
         #   - but really we wanted characters with no repetition!: 90 on 'LEETCODE'
         #
         #   The problem here is you didn't really get what the problem was was asking for
+        #   - This drops substrings that have same sequence but are in different positions!
         #
         from collections import Counter
         memo = {}

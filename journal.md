@@ -17,3 +17,11 @@ I've seen this trick where they use a 26 long array to be the frequency table ra
 
 ### 828
 Really stuck on this one, I'm not sure why my recursive attempt bruteforce searching all substrings isn't exploring all substrings?
+
+
+# 2024-04-07
+Aims for today:
+- Understand two pointer solution for 844
+-
+
+The test set for sliding window is _really_ hard. Maybe need to go do some more practice on easies/mediums.
