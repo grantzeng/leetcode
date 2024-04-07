@@ -20,8 +20,14 @@ Really stuck on this one, I'm not sure why my recursive attempt bruteforce searc
 
 
 # 2024-04-07
-Aims for today:
+Aims for today: work on some two pointer training set questions
 - Understand two pointer solution for 844
--
+- Figure out how the solution to 828 works
 
-The test set for sliding window is _really_ hard. Maybe need to go do some more practice on easies/mediums.
+
+The test set for sliding window is _really_ hard. Maybe need to go do some more practice on easies/mediums and come back to it later
+
+Feels kinda like, constantly seeking around to find a jumpable gap and having to be very deliberate because it's like slime how many unsolvable things there are.
+
+### On 828
+It's a dynamic programming problem, how is this a two pointer thing? Apparently the trick/intuition is to look at how many strings each token contributes to rather than traversing all substrings (since obviously they're overlapping). I think I'll leave this one for later.
