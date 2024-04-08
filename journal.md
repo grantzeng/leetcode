@@ -19,7 +19,7 @@ I've seen this trick where they use a 26 long array to be the frequency table ra
 Really stuck on this one, I'm not sure why my recursive attempt bruteforce searching all substrings isn't exploring all substrings?
 
 
-# 2024-04-07
+# 2024-04-07 Sun
 Aims for today: work on some two pointer training set questions
 - Understand two pointer solution for 844
 - Figure out how the solution to 828 works
@@ -31,3 +31,10 @@ Feels kinda like, constantly seeking around to find a jumpable gap and having to
 
 ### On 828
 It's a dynamic programming problem, how is this a two pointer thing? Apparently the trick/intuition is to look at how many strings each token contributes to rather than traversing all substrings (since obviously they're overlapping). I think I'll leave this one for later.
+
+# 2024-04-08 Mon
+
+### 75
+Dutch flag algorithm.
+
+Come back to investigating why the loop invariant here should be `j <= k` not `i <= j`, I don't fully grok this.
