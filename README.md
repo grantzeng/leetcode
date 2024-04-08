@@ -55,7 +55,7 @@ The notes are about grokking the algorithm involved, I've put all the time and s
 | https://leetcode.com/problems/combination-sum/description/?envType=list&envId=xlere2g3 |  |
 | https://leetcode.com/problems/permutations/description/?envType=list&envId=xlere2g3 |  |
 | https://leetcode.com/problems/combinations/description/?envType=list&envId=xlere2g3 |  |
-| https://leetcode.com/problems/subsets/description/?envType=list&envId=xlere2g3 |  |
+| https://leetcode.com/problems/subsets/description/?envType=list&envId=xlere2g3 | There's $2^n$  possible subsets, use a DFS to explore that and do backtracking on the tree. |
 
 | Practice & apply | Retrospection notes |
 | --- | --- |

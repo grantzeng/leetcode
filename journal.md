@@ -39,7 +39,6 @@ Dutch flag algorithm.
 
 Come back to investigating why the loop invariant here should be `j <= k` not `i <= j`, I don't fully grok this.
 
-
 Invariants we're maintaining (array bounds inclusive and treat $A[:-1]$ and $A[n:]$ to be empty.
 - $A[:i-1]$ should be an array of $0$'s
 - $A[i:j-1]$ should be an array of $1$'s
@@ -48,3 +47,6 @@ Invariants we're maintaining (array bounds inclusive and treat $A[:-1]$ and $A[n
 
 We shrink the last array by incrementing `j` but need to maintain invariant that $j \leq k$. That's the only reasonable explanation I can give for why the loop invariant is this way
 - (it's tracking processing of elements, we've got two arrays on the left and one array on the right of it)
+
+### Backtracking
+Not sure if most of these problems involve DFS
