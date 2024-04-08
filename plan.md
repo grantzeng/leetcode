@@ -1,5 +1,14 @@
 # leetcode 
 
+# New plan
+
+- Complete the 12-week plan here: https://www.youtube.com/watch?v=UKP-Vca9Q4c  (this goes through things strategy by strategy but is optimized for "most common questions" i.e. half your time is spent on array processing)
+- Complete `neetcode.io`  (this goes through things topic by topic, more DSA-y I guess)
+- Complete Grind 75 (generic list, but it was too hard to go through this initially because it wasn't topic/skill focused. But I think by the time I get to this, I'll have more tools in my toolbox.)
+
+After this, should examine closer what other tools I need/where my weaknesses are that need to improve.
+
+# Old plan
 It's been a real slog to not feel like I'm constantly bashing my head against a wall, and I certainly don't want to be learning this stuff like I was a kNN, because it ain't gonna generalise.
 
 Decided I'll follow the plan here: https://www.youtube.com/watch?v=UKP-Vca9Q4c

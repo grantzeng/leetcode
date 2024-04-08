@@ -2,12 +2,14 @@
 (Study plan for adding notes about how to solve these things)
 
 
-Things to think about:
+Things to think about eventually.
 - Pros/cons of different solutions
 - Error cases/edge cases and how to handle
 - What the optimal solution is (since you have to converge on this in an interview eventually).
 
 The notes are about grokking the algorithm involved, I've put all the time and space complexities in all my solutions.
+
+
 
 ### Week 1 - Arrays - Sliding Window
 
