@@ -1,28 +1,5 @@
 class Solution:
     def sortColors(self, nums: List[int]) -> None:
-        #
-        #
-        #   Alternative broken solution where I've tried to change the loop invarinat
-        #   (come back to this later)
-        #
-
-        n = len(nums)
-        i, k = 0, n - 1
-        j = i
-
-        while i <= j:
-            if nums[j] == 0:
-                nums[i], nums[j] = nums[j], nums[i]
-                i += 1
-                j += 1
-            elif nums[j] == 2:
-                nums[j], nums[k] = nums[k], nums[j]
-                k -= 1
-                if j >= k: j -= 1
-            else:
-                if j <= k: j += 1
-
-        return nums
 
 
         #
@@ -40,20 +17,14 @@ class Solution:
 
         while j <= k:
             if nums[j] == 0:
-                # Maintain A[:i] as an array of 0's
-                # - so A[i] may or may not be a 0, we don't care
-                # So all indicies from 0, ..., i -1 are zeros (if A[-1] then empty)
                 nums[i], nums[j] = nums[j], nums[i]
                 i += 1
-                j += 1 # Need to do this increment to maintain i <= j
+                j += 1
             elif nums[j] == 2:
-                # Maintain A[k + 1:] as array of 2's
-                # - A[k] may or may not be a 2, we don't care
                 nums[j], nums[k] = nums[k], nums[j]
-                k -= 1  # j <= k maintained by loop invariant
+                k -= 1
             else:
-                # A[j] is in the right place
-                j += 1  # j <= k maintained by loop invariant
+                j += 1
 
         return nums
 

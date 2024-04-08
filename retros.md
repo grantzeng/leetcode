@@ -34,7 +34,7 @@ The notes are about grokking the algorithm involved, I've put all the time and s
 | --- | --- |
 | https://leetcode.com/problems/backspace-string-compare/description/?envType=list&envId=xlem03mm | Parse from right to left to avoid having to backtrack, and write a helper function to grab next valid token. (_Intuition_: Generally with string/array problems try to come up with single pass solution) |
 | https://leetcode.com/problems/3sum/description/?envType=list&envId=xlem03mm | Repeat 2SUM two pointer solution for every prefix array (this is the whole "fix the first pointer" thing), but you have to pay for the sort for this to work. `TODO: Optimize this` |
-| https://leetcode.com/problems/sort-colors/description/?envType=list&envId=xlem03mm | Dutch national flag algorithm. Basically want to maintain $A[:i]$ prefix array of 0's and $A[k+ 1:]$ suffix array as 2, and also $i \leq j \leq k$, the hard part is deciding what loop invariant should be (you can maintain $j \leq k$, but you have to maintain $i \leq j$ in other ways). In any case $A[i]$ is not necessarily 0 and $A[k]$ is not necessarily 2. `TODO: I don't 100% get why the loop invariant should be $j \leq k$`|
+| https://leetcode.com/problems/sort-colors/description/?envType=list&envId=xlem03mm | Dutch national flag algorithm.  `TODO: I don't 100% get why the loop invariant should be $j \leq k$`|
 | https://leetcode.com/problems/container-with-most-water/description/?envType=list&envId=xlem03mm |  |
 
 | Practice & apply | Retrospection notes |
