@@ -35,7 +35,7 @@ The notes are about grokking the algorithm involved, I've put all the time and s
 | https://leetcode.com/problems/backspace-string-compare/description/?envType=list&envId=xlem03mm | Parse from right to left to avoid having to backtrack, and write a helper function to grab next valid token. (_Intuition_: Generally with string/array problems try to come up with single pass solution) |
 | https://leetcode.com/problems/3sum/description/?envType=list&envId=xlem03mm | Repeat 2SUM two pointer solution for every prefix array (this is the whole "fix the first pointer" thing), but you have to pay for the sort for this to work. `TODO: Optimize this` |
 | https://leetcode.com/problems/sort-colors/description/?envType=list&envId=xlem03mm | Dutch national flag algorithm.  `TODO: I don't 100% get why the loop invariant should be $j \leq k$`|
-| https://leetcode.com/problems/container-with-most-water/description/?envType=list&envId=xlem03mm |  |
+| https://leetcode.com/problems/container-with-most-water/description/?envType=list&envId=xlem03mm | *Greedy*. Greedily try to update the pointer pointing to the lowest height since you're going to get the best improvements to area from increasing height (whereas $\delta x$ is always $-1$) |
 
 | Practice & apply | Retrospection notes |
 | --- | --- |
