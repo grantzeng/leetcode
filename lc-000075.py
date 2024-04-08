@@ -43,11 +43,10 @@ class Solution:
         # or suffix array
 
         #
-        #   Apparently what's broken about this is i being less than k.
-        #   it should be j < k
+        #  The reason this doesn't work is you haven't maintained
+        #  j <= k anywhere. So once j > k, it'll start swapping 2's
+        #  into the array of 1's (hence the weird output)
         #
-
-
         n = len(nums)
 
         i, k = 0, n - 1
