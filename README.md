@@ -51,7 +51,7 @@ The notes are about grokking the algorithm involved, I've put all the time and s
 
 | Study solutions | Retrospection notes |
 | --- | --- |
-| https://leetcode.com/problems/letter-combinations-of-a-phone-number/description/?envType=list&envId=xlere2g3 |  |
+| https://leetcode.com/problems/letter-combinations-of-a-phone-number/description/?envType=list&envId=xlere2g3 | You're doing a DFS on a sort of prefix tree, and trying to print out all possible paths from root to any leaf node. So you'd use either a stack or recursion |
 | https://leetcode.com/problems/combination-sum/description/?envType=list&envId=xlere2g3 |  |
 | https://leetcode.com/problems/permutations/description/?envType=list&envId=xlere2g3 |  |
 | https://leetcode.com/problems/combinations/description/?envType=list&envId=xlere2g3 |  |
