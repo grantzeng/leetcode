@@ -5,7 +5,7 @@ class Solution:
 
         """
             Slightly quicker version that tracks combo in a variable rather than by pass
-
+            - Combo is basically a stack and we make a copy of stack state when it sums to total
         """
 
         res = []
@@ -30,26 +30,6 @@ class Solution:
 
         search(0, 0)
         return res
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
         """
             Working solution

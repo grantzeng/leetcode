@@ -62,7 +62,7 @@ backtrack():
 | Study solutions | Retrospection notes |
 | --- | --- |
 | https://leetcode.com/problems/letter-combinations-of-a-phone-number/description/?envType=list&envId=xlere2g3 | You're doing a DFS on a sort of prefix tree, and trying to print out all possible paths from root to any leaf node. So you'd use either a stack or recursion |
-| https://leetcode.com/problems/combination-sum/description/?envType=list&envId=xlere2g3 | More backtracking using DFS to traverse a "prefix tree" |
+| https://leetcode.com/problems/combination-sum/description/?envType=list&envId=xlere2g3 | More backtracking using DFS to traverse a "prefix tree". The issue is coming up with stopping case. |
 | https://leetcode.com/problems/permutations/description/?envType=list&envId=xlere2g3 |  |
 | https://leetcode.com/problems/combinations/description/?envType=list&envId=xlere2g3 |  |
 | https://leetcode.com/problems/subsets/description/?envType=list&envId=xlere2g3 | There's $2^n$  possible subsets, use a DFS to explore that and do backtracking on the tree. |
