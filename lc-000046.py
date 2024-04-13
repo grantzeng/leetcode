@@ -4,12 +4,12 @@ class Solution:
 
         """
             Second attempt
-            - The issue is to a tree representation of permutations
-
+            - Trick is you need to be able to see how permutations could be generate as a tree structure
             - Start with an empty set:
                 - pick an element
                 
-
+            Time: O(n!) because of the for loop on remaining runs n then n-1, ..., then 1 etc.
+            Space: O(n!) since there's n! permutations of a string of length n
         """
         res = []
         nums = set(nums)
