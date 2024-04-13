@@ -1,6 +1,56 @@
 class Solution:
     def combinationSum(self, candidates: List[int], target: int) -> List[List[int]]:
 
+
+
+        """
+            Slightly quicker version that tracks combo in a variable rather than by pass
+
+        """
+
+        res = []
+
+        combo = []
+        def search(i, total):
+            if total == target:
+                res.append(combo.copy())
+                return
+
+            if i >= len(candidates) or total > target:
+                return
+
+            # Try including candidate i
+            # - This lets us do repetitions e.g. search(i, *) will call search(i, *) and search(i + 1, *)
+            combo.append(candidates[i])
+            search(i, total + candidates[i])
+
+            # Try excluding candidate i
+            combo.pop()
+            search(i + 1, total)
+
+        search(0, 0)
+        return res
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         """
             Working solution
 
