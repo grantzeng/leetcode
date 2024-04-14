@@ -65,7 +65,7 @@ backtrack():
 | https://leetcode.com/problems/combination-sum/description/?envType=list&envId=xlere2g3 | More backtracking using DFS to traverse a "prefix tree". The issue is coming up with stopping case. |
 | https://leetcode.com/problems/permutations/description/?envType=list&envId=xlere2g3 | Use a set that has remaining elements and traverse through and leave one out for the next call. Basically if you can see how generating permutations as a tree works, you can write the back tracking to do it |
 | https://leetcode.com/problems/combinations/description/?envType=list&envId=xlere2g3 | Similar to permutation, but you only want to test adding elements to "right" of current element to the combo. You can either add number `i` or not add number `i` and let the recursion generate the branching of the tree. Stopping case when combination considered is length `k` |
-| https://leetcode.com/problems/subsets/description/?envType=list&envId=xlere2g3 | There's $2^n$  possible subsets, use a DFS to explore that and do backtracking on the tree. |
+| https://leetcode.com/problems/subsets/description/?envType=list&envId=xlere2g3 | There's $2^n$  possible subsets, use a DFS to explore that and do backtracking on the tree. It's the loop _and_ recursion that generates the branching at each point|
 
 | Practice & apply | Retrospection notes |
 | --- | --- |
@@ -79,6 +79,11 @@ backtrack():
 | https://leetcode.com/problems/sudoku-solver/description/?envType=list&envId=xlere2g3 |  |
 
 ### Week 4 - Arrays - Binary Search
+
+Binary search only works if you can assume input is monotonic, like you _need_ the total ordering on inputs. The problem I run into a lot of time with binary search is the whole off by one error and whether you've written the loop assuming inclusive or exclusive end points for bounds.
+
+Need to revise reasoning about the invariants at play and why sometimes you end up in an infinite loop and not. I did write this up at some point but I'd forgotten.
+
 
 | Study solutions | Retrospection notes |
 | --- | --- |
