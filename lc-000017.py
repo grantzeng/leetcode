@@ -1,5 +1,32 @@
 class Solution:
     def letterCombinations(self, digits: str) -> List[str]:
+        """
+            Improved version that only does string operations
+            but the intuition of how we're building the strings is the same
+        """
+        res = []
+        if not digits: return res
+
+
+        n = len(digits)
+        chars = ['', '', 'abc', 'def', 'ghi', 'jkl', 'mno', 'pqrs', 'tuv', 'wxyz']
+
+        def search(i, string):
+            if i >= n:
+                res.append(string)
+                return
+
+            # Decision making: for the next digit, either add or
+            # don't add a char and then go to the letter string of the next digit
+            for char in chars[int(digits[i])]:
+                string += char
+                search(i + 1, string)
+                string = string[:-1]
+
+        search(0, '')
+        return res
+
+
 
         #
         #   Trying an even more compact solution
