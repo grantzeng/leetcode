@@ -1,12 +1,59 @@
 class Solution:
 
     def subsets(self, nums: List[int]) -> List[List[int]]:
-        #
-        #
-        #   Slightly improved solution using for loops
-        #
-        #
 
+        """
+            Working solution
+            - Basically you have to encode the counting logic of
+              "we can either add nums[i] or we don't do the subset"
+            - and at every recursion call take a snapshot to get all
+              2^n subsets
+
+        """
+        n = len(nums)
+
+        res = []
+
+        def search(i, subset):
+            if i >= n:
+                res.append(subset.copy())
+                return
+
+            # Either we add nums[i] or we don't to a subset
+            subset.append(nums[i])
+            search(i + 1, subset)
+            subset.pop()
+            search(i + 1, subset)
+
+        search(0, [])
+        return res
+
+
+        """
+            A broken solution
+            - Why is it broken?
+        """
+        n = len(nums)
+
+        res = []
+
+        def search(i, subset):
+            res.append(subset.copy())
+
+            if i > len(nums): # No more elemens to add
+                return
+
+            for j in range(i, len(nums)):
+                subset.append(nums[i])
+                search(i + 1, subset)
+                subset.pop()
+
+        search(0, [])
+        return res
+        """
+            Bit string based solution (no need to worry about)
+
+        """
         n = len(nums)
         subsets = []
 
