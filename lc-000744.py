@@ -1,6 +1,76 @@
 class Solution:
     def nextGreatestLetter(self, letters: List[str], target: str) -> str:
 
+        """
+            More obvious solution that checks directly for the stopping condition
+
+            - This works, but that's because of the existing logic not the explicit checking
+              for the condition
+
+        """
+        if target < letters[0] or target >= letters[-1]: return letters[0]
+
+        i, j = 0, len(letters) - 1
+
+        while i <= j:
+            mid = (i + j) // 2
+            # if letters[i] <= target and letters[i + 1] > target:
+            #     return letters[i + 1]
+            if target >= letters[mid]:
+                i  = mid + 1
+            else:
+                j = mid - 1
+
+        return letters[i]
+
+
+
+        """
+            Alternative solution using exclusive upper bonds
+            - we have i < j since A[i:i] is an empty array with exclusive upperbounds
+        """
+
+        if target < letters[0] or target >= letters[-1]: return letters[0]
+
+        i, j = 0, len(letters)
+
+        while i < j:
+            mid = (i + j) // 2
+            if target >= letters[mid]:
+                # Normal binary search checks if greater than,
+                # - It's not letters[i] will actually be the element in question
+                i = mid + 1
+            else:
+                j = mid # since j is exlusive so last element in new search space is at mid -1
+
+        return letters[i]
+
+
+
+        """
+            Working solution
+            - Intuition:
+                -  we do the + 1 and - 1 because we've already looked at mid so remaining to
+                   search will be on either side of where mid is
+                - i <= j since A[i:i] with inclusive indexing is just A[i] i.e. non empty.
+
+        """
+
+        if target < letters[0] or target >= letters[-1]: return letters[0]
+
+        # Treating indexes as pointers so we have to keep them valid
+        i, j = 0, len(letters) - 1
+
+        while i <= j:
+            mid = (i + j) // 2
+
+            if target >= letters[mid]:
+                i = mid + 1
+            else:
+                j = mid - 1
+
+        return letters[i]
+
 
         """
             Yet another broken solution
