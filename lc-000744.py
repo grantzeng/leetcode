@@ -2,11 +2,19 @@ class Solution:
     def nextGreatestLetter(self, letters: List[str], target: str) -> str:
 
         """
-            More obvious solution that checks directly for the stopping condition
+            Why does i point at exactly the element that is one greater than target?
 
-            - This works, but that's because of the existing logic not the explicit checking
-              for the condition
+            The invariant is that i is set to mid + 1
+            - if target _exists_ in the array:
+                then at some point, mid will point to it (i.e. letters[mid] = target)
+            - if target _doesn't exist_ in the array, but is within the bounds of the array:
+              per the check then
 
+            ... yeah come back to this, this seems a bit like a post-hoc rationalisation.
+            We'll have to think about it a bit more: being able to explain the `>=` condition
+            is important to understanding this algorithm
+
+            Something to do with upper/lower bounding behaviour you'll have to carefully explain later
         """
         if target < letters[0] or target >= letters[-1]: return letters[0]
 
@@ -17,7 +25,7 @@ class Solution:
             # if letters[i] <= target and letters[i + 1] > target:
             #     return letters[i + 1]
             if target >= letters[mid]:
-                i  = mid + 1
+                i = mid + 1
             else:
                 j = mid - 1
 

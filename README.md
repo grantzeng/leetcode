@@ -83,11 +83,11 @@ backtrack():
 Binary search only works if you can assume input is monotonic, like you _need_ the total ordering on inputs. The problem I run into a lot of time with binary search is the whole off by one error and whether you've written the loop assuming inclusive or exclusive end points for bounds.
 
 Need to revise reasoning about the invariants at play and why sometimes you end up in an infinite loop and not. I did write this up at some point but I'd forgotten.
-- Basically the issue is whether you treat array slices as inclusive/exclusive of upper bounds (and this changes what you set as `hi` and what the stopping condition of the while loop is (it should stop on an empty array))
+- Basically the issue is whether you treat array slices as inclusive/exclusive of upper bounds (and this changes what you set as `hi` and what the stopping condition of the while loop is (it should stop on an empty array: "continue until search space is exhausted"))
 
 | Study solutions | Retrospection notes |
 | --- | --- |
-| https://leetcode.com/problems/find-smallest-letter-greater-than-target/description/ | Modified binary search, but it's still a little bit unclear to me why `i` should land exactly on the second lowest one |
+| https://leetcode.com/problems/find-smallest-letter-greater-than-target/description/ | Modified binary search, but it's still a little bit unclear to me why `i` should land exactly on the second lowest one `TODO: need to think about this for a bit` |
 | https://leetcode.com/problems/find-peak-element/description/ |  |
 | https://leetcode.com/problems/peak-index-in-a-mountain-array/description/?envType=list&envId=xleplgq3 |  |
 | https://leetcode.com/problems/search-in-rotated-sorted-array/description/?envType=list&envId=xleplgq3 |  |
