@@ -64,3 +64,17 @@ Whether `j` is inclusive or exclusive of search space?
 > Algorithm is much easier if `j` is always a valid index. But it should be possible to write it in a way where it _isn't_? i.e. $A[i:i]$ is treated as array of 1 element rather than empty array if we have inclusive upper bound?
 
 I wonder if Jensen's inequality has anything to do with why this works. Trying to find some locally convex thing? But priority here is more understanding how the binary search is behaving and how to break it and how to fix it.
+
+### 852
+Same algorithm as 162
+> Issue here is you're not 100% clear about how you can modify 162 to break it or use different conventions and explain all that, so something to come and revise later.
+
+### General to do:
+Need to sit down and analyse binary search algorithm to figure out when stuff breaks or doesn't. There's some subtlties here. I think maybe helpful to explain in terms of how you're contracting the search space?
+
+We will come back to 33 tomorrow, the search in a rotated array.
+
+### Jotting some ideas for 33
+You could explicilty find the pivot (doing a binary search to find a valley as it were?)
+
+Or you can do it without finding pivot?
