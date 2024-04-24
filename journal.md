@@ -62,3 +62,5 @@ How do you make sure `mid` is a valid index?
 
 Whether `j` is inclusive or exclusive of search space?
 > Algorithm is much easier if `j` is always a valid index. But it should be possible to write it in a way where it _isn't_? i.e. $A[i:i]$ is treated as array of 1 element rather than empty array if we have inclusive upper bound?
+
+I wonder if Jensen's inequality has anything to do with why this works. Trying to find some locally convex thing? But priority here is more understanding how the binary search is behaving and how to break it and how to fix it.

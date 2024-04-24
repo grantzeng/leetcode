@@ -88,7 +88,7 @@ Need to revise reasoning about the invariants at play and why sometimes you end 
 | Study solutions | Retrospection notes |
 | --- | --- |
 | https://leetcode.com/problems/find-smallest-letter-greater-than-target/description/ | Modified binary search, but it's still a little bit unclear to me why `i` should land exactly on the second lowest one `TODO: need to think about this for a bit` |
-| https://leetcode.com/problems/find-peak-element/description/ |  |
+| https://leetcode.com/problems/find-peak-element/description/ | Greedy update `mid` to the neighbour if it's less than either of its neighbours (if the neighbour exists). But there are issues re: implementation in keeping `mid` a valid index and how to code up loop condition to make sure it terminates (Are you treating $A[i:j]$ as including $j$ or not?) |
 | https://leetcode.com/problems/peak-index-in-a-mountain-array/description/?envType=list&envId=xleplgq3 |  |
 | https://leetcode.com/problems/search-in-rotated-sorted-array/description/?envType=list&envId=xleplgq3 |  |
 
