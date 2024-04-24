@@ -39,7 +39,7 @@ Dutch flag algorithm.
 
 Come back to investigating why the loop invariant here should be `j <= k` not `i <= j`, I don't fully grok this.
 
-Invariants we're maintaining (array bounds inclusive and treat $A[:-1]$ and $A[n:]$ to be empty.
+Invariants we're maintaining (array bounds inclusive and treat $A[:-1]$ and $A[n:]$ to be empty.)
 - $A[:i-1]$ should be an array of $0$'s
 - $A[i:j-1]$ should be an array of $1$'s
 - $A[k+1:]$ should be an array of $2$'s
@@ -50,3 +50,15 @@ We shrink the last array by incrementing `j` but need to maintain invariant that
 
 ### Backtracking
 Not sure if most of these problems involve DFS
+
+
+# 2024-04-24
+
+### 162
+More binary search shenanigans
+
+How do you make sure `mid` is a valid index?
+> Why doesn't `(i + j) // 2` just work? Over having update rule as `i + (j - i) // 2`?
+
+Whether `j` is inclusive or exclusive of search space?
+> Algorithm is much easier if `j` is always a valid index. But it should be possible to write it in a way where it _isn't_? i.e. $A[i:i]$ is treated as array of 1 element rather than empty array if we have inclusive upper bound?
