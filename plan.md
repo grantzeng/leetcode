@@ -1,5 +1,12 @@
 # leetcode 
 
+# Revised plan (2024-04-24)
+
+Focus on getting array stuff down to a pat.
+
+3231 is not useful for me right now, because you can't even just _do_ leetcodes on the spot
+
+
 # New plan
 
 - Complete the 12-week plan here: https://www.youtube.com/watch?v=UKP-Vca9Q4c  (this goes through things strategy by strategy but is optimized for "most common questions" i.e. half your time is spent on array processing)

@@ -78,3 +78,11 @@ We will come back to 33 tomorrow, the search in a rotated array.
 You could explicilty find the pivot (doing a binary search to find a valley as it were?)
 
 Or you can do it without finding pivot?
+
+
+# 2024-04-25
+
+### 33
+Basically, your code needs to detect whether you're in the uppper part or the lower part of the rotation.
+
+What is the mathematical proof that $\lfloor \frac{i + j}{2}\rfloor = i + \lfloor{\frac{j - i}{2}}\rfloor$
