@@ -94,7 +94,7 @@ Need to revise reasoning about the invariants at play and why sometimes you end 
 
 | Practice & apply | Retrospection notes |
 | --- | --- |
-| https://leetcode.com/problems/first-bad-version/description/ |  |
+| https://leetcode.com/problems/first-bad-version/description/ | Standard binary search implementation; just test if the mid point is bad or not, if it's not bad, we can safely raise the lower bound $i$. $i$ should land on position of bad version because it will always be $mid + 1$ (?)  |
 | https://leetcode.com/problems/search-in-rotated-sorted-array-ii/description/?envType=list&envId=xleplgq3 |  |
 | https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/description/?envType=list&envId=xleplgq3 |  |
 | https://leetcode.com/problems/search-a-2d-matrix/description/?envType=list&envId=xleplgq3 |  |
