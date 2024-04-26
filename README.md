@@ -19,13 +19,13 @@ The notes are about grokking the algorithm involved, I've put all the time and s
 | https://leetcode.com/problems/maximum-average-subarray-i/description/ | $k$ is fixed so just take window sum and you can compute average at the end. Error cases happen when array is size $< k$; you need to ask what behaviour is expected.  |
 | https://leetcode.com/problems/find-all-anagrams-in-a-string/description/ | Strings which are anagrams will have the same "spectrum"/character frequency table. Suboptimal solution is to rebuild the window's table every time, better solution is to update the table each time the window slides. You can use a hashtable, or you can do the C-style trick of a 26-element array (`TODO: implement C-style version`). Edge cases: when `p` is shorter than `s`. |
 | https://leetcode.com/problems/permutation-in-string/description/?envType=list&envId=xlep8di5 | Similar strategy to above (check permutation, in this context permutations and anagrams are the same thing). (`TODO: come back to implement C-style solution` later.). Same edge case where target is bigger than string being searched|
-| https://leetcode.com/problems/count-unique-characters-of-all-substrings-of-a-given-string/description/?envType=list&envId=xlep8di5 | ~~Dynamic programming means come up with a recursive solution first (SRTBOT)~~ This one is hard, I'm having trouble deciding when a repeated substring counts or not.   |
+| https://leetcode.com/problems/count-unique-characters-of-all-substrings-of-a-given-string/description/?envType=list&envId=xlep8di5 | ~~Dynamic programming means come up with a recursive solution first (SRTBOT) This one is hard, I'm having trouble deciding when a repeated substring counts or not. ~~ `TODO: Come back to this one because I don't fully understand how the solution works` |
 
 | Practice & apply | Retrospection notes |
 | --- | --- |
 | https://leetcode.com/problems/substrings-of-size-three-with-distinct-characters/description/ | Straightforward, just watch out for off-by-one errors with sliding the window |
 | https://leetcode.com/problems/minimum-size-subarray-sum/description/?envType=list&envId=xlep8di5 |  |
-| https://leetcode.com/problems/longest-repeating-character-replacement/description/?envType=list&envId=xlep8di5 |  |
+| https://leetcode.com/problems/longest-repeating-character-replacement/description/?envType=list&envId=xlep8di5 | $O(n^2)$ solution is to just bruteforce search forward until duplicate at every position. `TODO: Figure out a more minimal solution that is faster that is more C style` |
 | https://leetcode.com/problems/longest-substring-without-repeating-characters/description/ |  |
 | https://leetcode.com/problems/sliding-window-maximum/description/?envType=list&envId=xlep8di5mi |  |
 | https://leetcode.com/problems/minimum-window-substring/description/?envType=list&envId=xlep8di5 |  |
