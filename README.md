@@ -25,8 +25,8 @@ The notes are about grokking the algorithm involved, I've put all the time and s
 | --- | --- |
 | https://leetcode.com/problems/substrings-of-size-three-with-distinct-characters/description/ | Straightforward, just watch out for off-by-one errors with sliding the window |
 | https://leetcode.com/problems/minimum-size-subarray-sum/description/?envType=list&envId=xlep8di5 |  |
-| https://leetcode.com/problems/longest-repeating-character-replacement/description/?envType=list&envId=xlep8di5 | $O(n^2)$ solution is to just bruteforce search forward until duplicate at every position. `TODO: Figure out a more minimal solution that is faster that is more C style` |
-| https://leetcode.com/problems/longest-substring-without-repeating-characters/description/ |  |
+| https://leetcode.com/problems/longest-repeating-character-replacement/description/?envType=list&envId=xlep8di5 | |
+| https://leetcode.com/problems/longest-substring-without-repeating-characters/description/ | $O(n^2)$ solution is to just bruteforce search forward until duplicate at every position. `TODO: Figure out a more minimal solution that is faster that is more C style` |
 | https://leetcode.com/problems/sliding-window-maximum/description/?envType=list&envId=xlep8di5mi |  |
 | https://leetcode.com/problems/minimum-window-substring/description/?envType=list&envId=xlep8di5 |  |
 
@@ -42,7 +42,7 @@ The notes are about grokking the algorithm involved, I've put all the time and s
 | Practice & apply | Retrospection notes |
 | --- | --- |
 | https://leetcode.com/problems/two-sum/description/?envType=list&envId=xlem03mm |  |
-| https://leetcode.com/problems/squares-of-a-sorted-array/description/?envType=list&envId=xlem03mm |  |
+| https://leetcode.com/problems/squares-of-a-sorted-array/description/?envType=list&envId=xlem03mm | Build the result in reverse, because the maximum element is going to be at either `0` or `n - 1`. That's where the two pointers comes in. (No need to try to find a "centre" element and then two pointer your way to the boundary) |
 | https://leetcode.com/problems/subarray-product-less-than-k/description/ |  |
 | https://leetcode.com/problems/3sum-closest/description/?envType=list&envId=xlem03mm |  |
 | https://leetcode.com/problems/trapping-rain-water/description/?envType=list&envId=xlem03mm |  |
