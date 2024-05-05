@@ -34,14 +34,14 @@ The notes are about grokking the algorithm involved, I've put all the time and s
 
 | Study solutions | Retrospection notes |
 | --- | --- |
-| https://leetcode.com/problems/backspace-string-compare/description/?envType=list&envId=xlem03mm | Parse from right to left to avoid having to backtrack, and write a helper function to grab next valid token. (_Intuition_: Generally with string/array problems try to come up with single pass solution) |
+| https://leetcode.com/problems/backspace-string-compare/description/?envType=list&envId=xlem03mm | Parse from right to left to avoid having to backtrack, and write a helper function to grab next valid token (The helper is basically a state machine, it's either looking for a valid token to return, or it's looking for a token to skip because of backspace). (_Intuition_: Generally with string/array problems try to come up with single pass solution) |
 | https://leetcode.com/problems/3sum/description/?envType=list&envId=xlem03mm | Repeat 2SUM two pointer solution for every prefix array (this is the whole "fix the first pointer" thing), but you have to pay for the sort for this to work. `TODO: Optimize this` |
 | https://leetcode.com/problems/sort-colors/description/?envType=list&envId=xlem03mm | Dutch national flag algorithm.  You need `j <= k` in the loop invariant because it's the array $A[j: k]$ that contains the unsorted elements (see notes in journal for discussion of invariants we're maintaining).|
 | https://leetcode.com/problems/container-with-most-water/description/?envType=list&envId=xlem03mm | *Greedy*. Greedily try to update the pointer pointing to the lowest height since you're going to get the best improvements to area from increasing height (whereas $\delta x$ is always $-1$) |
 
 | Practice & apply | Retrospection notes |
 | --- | --- |
-| https://leetcode.com/problems/two-sum/description/?envType=list&envId=xlem03mm |  |
+| https://leetcode.com/problems/two-sum/description/?envType=list&envId=xlem03mm | (Sorting solution is fine when you don't have to return original indices because otherwise you have to track the index scrambling, and you might as well have done the $O(n)$ hash table solution instead) |
 | https://leetcode.com/problems/squares-of-a-sorted-array/description/?envType=list&envId=xlem03mm | Build the result in reverse, because the maximum element is going to be at either `0` or `n - 1`. That's where the two pointers comes in. (No need to try to find a "centre" element and then two pointer your way to the boundary) |
 | https://leetcode.com/problems/subarray-product-less-than-k/description/ |  |
 | https://leetcode.com/problems/3sum-closest/description/?envType=list&envId=xlem03mm |  |
