@@ -1,5 +1,38 @@
 class Solution:
     def backspaceCompare(self, s: str, t: str) -> bool:
+
+        #
+        # This is just a state machine somehow isn't it?
+        #   - Either we're looking for a token to spit out
+        #   - Or we're looking for the next valid token to discard?
+        #
+        def next_token(str, idx):
+            backspace = 0
+            while idx >= 0:
+                if backspace == 0 and str[idx] != '#':
+                    # Valid token (neither backspace token nor looking for a token to discard)
+                    break
+                elif str[idx] == '#':
+                    # Saw backspace token
+                    backspace += 1
+                else:
+                    # Discard current token due to backspace
+                    backspace -= 1
+
+                idx -= 1
+
+            return (idx, str[idx] if idx >= 0 else "")
+
+        i, j = len(s) - 1, len(t) - 1
+        while i >= 0 or j >= 0:
+            i, token_s, j, token_t = *next_token(s, i), *next_token(t, j)
+            if token_s != token_t: return False
+            i, j = i - 1, j - 1
+
+
+        return True
+
+
         #
         #   Two pointer solution that does work
         #   - Have a helper function to grab next token
