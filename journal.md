@@ -86,3 +86,9 @@ Or you can do it without finding pivot?
 Basically, your code needs to detect whether you're in the uppper part or the lower part of the rotation.
 
 What is the mathematical proof that $\lfloor \frac{i + j}{2}\rfloor = i + \lfloor{\frac{j - i}{2}}\rfloor$
+
+
+# 2024-05-08 Wed
+
+I'm stuck on 713 but I don't want to look up the solution yet.
+
