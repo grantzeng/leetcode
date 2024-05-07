@@ -19,7 +19,7 @@ The notes are about grokking the algorithm involved, I've put all the time and s
 | https://leetcode.com/problems/maximum-average-subarray-i/description/ | $k$ is fixed so just take window sum and you can compute average at the end. Error cases happen when array is size $< k$; you need to ask what behaviour is expected.  |
 | https://leetcode.com/problems/find-all-anagrams-in-a-string/description/ | Strings which are anagrams will have the same "spectrum"/character frequency table. Suboptimal solution is to rebuild the window's table every time, better solution is to update the table each time the window slides. You can use a hashtable, or you can do the C-style trick of a 26-element array (`TODO: implement C-style version`). Edge cases: when `p` is shorter than `s`. |
 | https://leetcode.com/problems/permutation-in-string/description/?envType=list&envId=xlep8di5 | Similar strategy to above (check permutation, in this context permutations and anagrams are the same thing). (`TODO: come back to implement C-style solution` later.). Same edge case where target is bigger than string being searched|
-| https://leetcode.com/problems/count-unique-characters-of-all-substrings-of-a-given-string/description/?envType=list&envId=xlep8di5 | ~~Dynamic programming means come up with a recursive solution first (SRTBOT) This one is hard, I'm having trouble deciding when a repeated substring counts or not. ~~ `TODO: Come back to this one because I don't fully understand how the solution works` |
+| https://leetcode.com/problems/count-unique-characters-of-all-substrings-of-a-given-string/description/?envType=list&envId=xlep8di5 | `HARD COME BACK LATER` |
 
 | Practice & apply | Retrospection notes |
 | --- | --- |
@@ -44,8 +44,8 @@ The notes are about grokking the algorithm involved, I've put all the time and s
 | https://leetcode.com/problems/two-sum/description/?envType=list&envId=xlem03mm | (Sorting solution is fine when you don't have to return original indices because otherwise you have to track the index scrambling, and you might as well have done the $O(n)$ hash table solution instead) |
 | https://leetcode.com/problems/squares-of-a-sorted-array/description/?envType=list&envId=xlem03mm | Build the result in reverse, because the maximum element is going to be at either `0` or `n - 1`. That's where the two pointers comes in. (No need to try to find a "centre" element and then two pointer your way to the boundary) |
 | https://leetcode.com/problems/subarray-product-less-than-k/description/ |  |
-| https://leetcode.com/problems/3sum-closest/description/?envType=list&envId=xlem03mm |  |
-| https://leetcode.com/problems/trapping-rain-water/description/?envType=list&envId=xlem03mm |  |
+| https://leetcode.com/problems/3sum-closest/description/?envType=list&envId=xlem03mm | You need to know the 3SUM 2 pointer algorithm since this will inch all the pointers to a triplet that sums closest to the target, the only difference is just needing to update the closest sum every time|
+| https://leetcode.com/problems/trapping-rain-water/description/?envType=list&envId=xlem03mm | `HARD` |
 
 ### Week 3 - Arrays - Recursion & Backtracking
 
@@ -104,7 +104,7 @@ Need to revise reasoning about the invariants at play and why sometimes you end 
 
 | Study solutions | Retrospection notes |
 | --- | --- |
-| https://leetcode.com/problems/valid-parentheses/description/ |  |
+| https://leetcode.com/problems/valid-parentheses/description/ | It's all about tokens. (And use a hash table to keep track of things matching up) |
 | https://leetcode.com/problems/maximum-subarray-min-product/description/ |  |
 | https://leetcode.com/problems/minimum-add-to-make-parentheses-valid/description/ |  |
 | https://leetcode.com/problems/merge-intervals/description/ |  |
