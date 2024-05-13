@@ -97,6 +97,10 @@ I'm stuck on 713 but I don't want to look up the solution yet.
 
 I think I will start with ~~griding~~ figuring out how sliding window works.
 
+Change of plan. I think for the next month: focus on array problems
+- Sliding window  (I feel like a lot of these algorithms probably have some better theoretical explanation than all the rabbit out of hat tricks, but this is not what I care about right now, _how_ to come up with a solution on the spot)
+
+_Maybe_ come back to things later re: why Kadane's algorithm works (can you state it in SRTBOT framework?)
 
 
 
