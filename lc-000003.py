@@ -2,6 +2,47 @@ class Solution:
     def lengthOfLongestSubstring(self, s: str) -> int:
 
         """
+            I think two while loops makes more sense because we're controlling array bounds with two
+            "pointers" but this is the for loop solution instead
+
+            TODO: Rewrite with defaultdict so it handles the resource checks
+        """
+
+        res = 0
+        i = 0
+        seen = {}
+
+        for j in range(len(s)):
+            seen[s[j]] = seen.get(s[j], 0) + 1
+            while seen[s[j]] > 1:
+                seen[s[i]] -= 1
+                i += 1
+            res = max(j - i + 1, res)
+
+        return res
+
+        """
+            Actually we didn't need that if statement at all, because the while loop is checking for it anyway!
+        """
+
+        res = 0
+        i, j  = 0, 0
+        seen = {}
+        while j < len(s):   # Expand right bound
+            ch = s[j]
+            seen[ch] = seen.get(ch, 0) + 1
+
+
+            while seen[ch] > 1: # Contract left bound until fix invariant
+                seen[s[i]] -= 1
+                i += 1
+
+            res = max(j - i + 1, res)
+            j += 1
+
+        return res
+
+        """
             Better O(n) solution where you have two loops controlling
             - single set object tracking letters in current subarray that you modify
 
