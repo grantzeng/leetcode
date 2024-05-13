@@ -92,3 +92,12 @@ What is the mathematical proof that $\lfloor \frac{i + j}{2}\rfloor = i + \lfloo
 
 I'm stuck on 713 but I don't want to look up the solution yet.
 
+
+# 2024-05-13 Mon
+
+I think I will start with ~~griding~~ figuring out how sliding window works.
+
+
+
+
+
