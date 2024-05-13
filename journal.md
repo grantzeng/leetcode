@@ -103,5 +103,7 @@ Change of plan. I think for the next month: focus on array problems
 _Maybe_ come back to things later re: why Kadane's algorithm works (can you state it in SRTBOT framework?)
 
 
+# 2024-05-14 Tue
+We had a good run, solved two sliding window problems using what I learnt yesterday. So let's just leave it at that.
 
 
