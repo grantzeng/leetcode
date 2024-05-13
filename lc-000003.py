@@ -2,6 +2,41 @@ class Solution:
     def lengthOfLongestSubstring(self, s: str) -> int:
 
         """
+            Better O(n) solution where you have two loops controlling
+            - single set object tracking letters in current subarray that you modify
+
+            Inspiration is from 209.
+
+            I think it's _sort_ of greedy. i.e. we want longest window, so keep trying to extend it
+            until some invariant is violated, then contract until the invariant is fixed? (Invariant
+            being that valid window has no repeats)
+
+        """
+        n = len(s)
+        res = 0
+
+        i, j = 0, 0
+        seen = {}
+
+        while j < n: # Greedily try to expand the window
+            ch = s[j]
+            seen[ch] = seen.get(ch, 0) + 1
+
+            if seen[ch] > 1:
+                # Saw a repeat, naively keep deleting left bound
+                # until no repeats
+                while seen[ch] > 1:
+                    seen[s[i]] -= 1
+                    i += 1
+
+            res = max(j - i + 1, res) # Snapshot window length
+            j += 1
+
+        return res
+
+
+
+        """
             Basic working solution:
             - but kinda slow because of how I rebuild set every time?
 
