@@ -14,9 +14,9 @@ Notes about how to solve each problem/intuitions
 
 | Practice & apply | Retrospection notes |
 | --- | --- |
-| https://leetcode.com/problems/substrings-of-size-three-with-distinct-characters/description/ | Straightforward, just watch out for off-by-one errors with sliding the window |
+| https://leetcode.com/problems/substrings-of-size-three-with-distinct-characters/description/ | Straightforward fixed length sliding window, just watch out for off-by-one errors with sliding the window |
 | https://leetcode.com/problems/minimum-size-subarray-sum/description/?envType=list&envId=xlep8di5 | Modified prefix sum (the difficulty is figuring out when to grow and shrink the window) |
-| https://leetcode.com/problems/longest-repeating-character-replacement/description/?envType=list&envId=xlep8di5 | |
+| https://leetcode.com/problems/longest-repeating-character-replacement/description/?envType=list&envId=xlep8di5 | Use the same pattern of outer loop trying to extend the window and inner loop to contract window to fix any invariant violations we require of a subarray |
 | https://leetcode.com/problems/longest-substring-without-repeating-characters/description/ | ~~$O(n^2)$ solution is to just bruteforce search forward until duplicate at every position. `TODO: Figure out a more minimal solution that is faster that is more C style`~~  Variable length sliding window, just have an outer loop that keeps trying to extend right bound and inner loop that contracts leftbound. Like a catepillar. (Basically similar to 209/above question). Bruteforce solution is just trying every fixed window length so that ends up being $O(n)$ |
 | https://leetcode.com/problems/sliding-window-maximum/description/?envType=list&envId=xlep8di5mi | `HARD COME BACK LATER` |
 | https://leetcode.com/problems/minimum-window-substring/description/?envType=list&envId=xlep8di5 | `HARD COME BACK LATER` |
