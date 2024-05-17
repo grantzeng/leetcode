@@ -5,6 +5,7 @@ Notes about how to solve each problem/intuitions
 ### Week 1 - Arrays - Sliding Window
 
 
+
 | Study solutions | Retrospection notes |
 | --- | --- |
 | https://leetcode.com/problems/maximum-average-subarray-i/description/ | $k$ is fixed so just take window sum and you can compute average at the end. Error cases happen when array is size $< k$; you need to ask what behaviour is expected.  |
@@ -18,19 +19,28 @@ Notes about how to solve each problem/intuitions
 | https://leetcode.com/problems/minimum-size-subarray-sum/description/?envType=list&envId=xlep8di5 | Modified prefix sum (the difficulty is figuring out when to grow and shrink the window) |
 | https://leetcode.com/problems/longest-repeating-character-replacement/description/?envType=list&envId=xlep8di5 | Use the same pattern of outer loop trying to extend the window and inner loop to contract window to fix any invariant violations we require of a subarray |
 | https://leetcode.com/problems/longest-substring-without-repeating-characters/description/ | ~~$O(n^2)$ solution is to just bruteforce search forward until duplicate at every position. `TODO: Figure out a more minimal solution that is faster that is more C style`~~  Variable length sliding window, just have an outer loop that keeps trying to extend right bound and inner loop that contracts leftbound. Like a catepillar. (Basically similar to 209/above question). Bruteforce solution is just trying every fixed window length so that ends up being $O(n)$ |
-| https://leetcode.com/problems/sliding-window-maximum/description/?envType=list&envId=xlep8di5mi | `HARD COME BACK LATER` |
-| https://leetcode.com/problems/minimum-window-substring/description/?envType=list&envId=xlep8di5 | `HARD COME BACK LATER` |
+| https://leetcode.com/problems/sliding-window-maximum/description/?envType=list&envId=xlep8di5mi | `HARD` |
+| https://leetcode.com/problems/minimum-window-substring/description/?envType=list&envId=xlep8di5 | `HARD` |
 
 
 
 | Stuff from Neetcode | Retrospection notes |
 | --- | --- |
 | https://leetcode.com/problems/best-time-to-buy-and-sell-stock/description/| Greedily keep taking better buy price, `i` needs to lag `j`  to keep buy before sell.|
-|https://leetcode.com/problems/longest-substring-without-repeating-characters/ ||
+|~~https://leetcode.com/problems/longest-substring-without-repeating-characters/~~ ||
 |~~https://leetcode.com/problems/longest-repeating-character-replacement/description/~~||
-|https://leetcode.com/problems/permutation-in-string/description/||
+|~~https://leetcode.com/problems/permutation-in-string/description/~~||
 |https://leetcode.com/problems/minimum-window-substring/description/||
 |https://leetcode.com/problems/sliding-window-maximum/description/||
+
+**Some quick notes about variable length sliding window**
+
+Something I've noticed: basically for a variable sliding window need to handle:
+ - Expanding right bound (usually just get it to keep inching forward) (You can use a for loop to do this, but to me I am still moving a pointer around so I prefer while)
+ - Contracting left bound (i.e. on what conditions do we move the left bound?) Often this looks like deleting things until the slice satisifes some invariant.
+
+Usually entirely apparent to me _how_ you could prove correctness, but that's not the point. Maybe they'll address this in 3121.
+
 ### Week 2 - Arrays - Two Pointers
 
 | Study solutions | Retrospection notes |
