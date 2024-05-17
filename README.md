@@ -21,6 +21,7 @@ Notes about how to solve each problem/intuitions
 | https://leetcode.com/problems/longest-substring-without-repeating-characters/description/ | ~~$O(n^2)$ solution is to just bruteforce search forward until duplicate at every position. `TODO: Figure out a more minimal solution that is faster that is more C style`~~  Variable length sliding window, just have an outer loop that keeps trying to extend right bound and inner loop that contracts leftbound. Like a catepillar. (Basically similar to 209/above question). Bruteforce solution is just trying every fixed window length so that ends up being $O(n)$ |
 | https://leetcode.com/problems/sliding-window-maximum/description/?envType=list&envId=xlep8di5mi | `HARD` |
 | https://leetcode.com/problems/minimum-window-substring/description/?envType=list&envId=xlep8di5 | `HARD` |
+| https://leetcode.com/problems/subarray-product-less-than-k/description/ | Maintain window product. Main change is the increment to count of how many subarrays should be `j -i + 1` not just `1` because if $A[i:j]$ has product less than k, then so will all $A[i:x]$ for $x < j$|
 
 
 
@@ -54,7 +55,7 @@ Usually entirely apparent to me _how_ you could prove correctness, but that's no
 | --- | --- |
 | https://leetcode.com/problems/two-sum/description/?envType=list&envId=xlem03mm | (Sorting solution is fine when you don't have to return original indices because otherwise you have to track the index scrambling, and you might as well have done the $O(n)$ hash table solution instead) |
 | https://leetcode.com/problems/squares-of-a-sorted-array/description/?envType=list&envId=xlem03mm | Build the result in reverse, because the maximum element is going to be at either `0` or `n - 1`. That's where the two pointers comes in. (No need to try to find a "centre" element and then two pointer your way to the boundary) |
-| https://leetcode.com/problems/subarray-product-less-than-k/description/ |  |
+| ~~https://leetcode.com/problems/subarray-product-less-than-k/description/~~ | (See sliding window) |
 | https://leetcode.com/problems/3sum-closest/description/?envType=list&envId=xlem03mm | You need to know the 3SUM 2 pointer algorithm since this will inch all the pointers to a triplet that sums closest to the target, the only difference is just needing to update the closest sum every time|
 | https://leetcode.com/problems/trapping-rain-water/description/?envType=list&envId=xlem03mm | `HARD` |
 
