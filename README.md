@@ -25,7 +25,12 @@ Notes about how to solve each problem/intuitions
 
 | Stuff from Neetcode | Retrospection notes |
 | --- | --- |
-| | |
+| https://leetcode.com/problems/best-time-to-buy-and-sell-stock/description/| Greedily keep taking better buy price, `i` needs to lag `j`  to keep buy before sell.|
+|https://leetcode.com/problems/longest-substring-without-repeating-characters/ ||
+|~~https://leetcode.com/problems/longest-repeating-character-replacement/description/~~||
+|https://leetcode.com/problems/permutation-in-string/description/||
+|https://leetcode.com/problems/minimum-window-substring/description/||
+|https://leetcode.com/problems/sliding-window-maximum/description/||
 ### Week 2 - Arrays - Two Pointers
 
 | Study solutions | Retrospection notes |
