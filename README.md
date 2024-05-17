@@ -31,8 +31,8 @@ Notes about how to solve each problem/intuitions
 |~~https://leetcode.com/problems/longest-substring-without-repeating-characters/~~ ||
 |~~https://leetcode.com/problems/longest-repeating-character-replacement/description/~~||
 |~~https://leetcode.com/problems/permutation-in-string/description/~~||
-|https://leetcode.com/problems/minimum-window-substring/description/||
-|https://leetcode.com/problems/sliding-window-maximum/description/||
+|~~https://leetcode.com/problems/minimum-window-substring/description/~~||
+|~~https://leetcode.com/problems/sliding-window-maximum/description/~~||
 
 **Some quick notes about variable length sliding window**
 

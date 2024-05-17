@@ -107,3 +107,15 @@ _Maybe_ come back to things later re: why Kadane's algorithm works (can you stat
 We had a good run, solved two sliding window problems using what I learnt yesterday. So let's just leave it at that.
 
 
+# 2024-50-17 Fri
+I think I sort of get sliding window now, especially variable length. Next one to focus on is recursion and back tracking.
+
+I think my strategy will be:
+- Follow this plan
+    - But skip all the hards for now, we'll come back to them later in a month or so when your skills are better
+- If you don't really get something, go look for more practice questions from `neetcode.io`.
+- Once we've gone through all 12 weeks of this:
+    - Go back and try the hards
+    - Go through all of neetcode.
+
+In an interview I assume you'd have to explain your logic as well, so...we will deal with this later, this is a different problem.
