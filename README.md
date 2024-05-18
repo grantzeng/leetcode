@@ -90,6 +90,11 @@ backtrack():
 | https://leetcode.com/problems/combination-sum-iii/description/?envType=list&envId=xlere2g3 |  |
 | https://leetcode.com/problems/sudoku-solver/description/?envType=list&envId=xlere2g3 |  |
 
+
+
+_Notes to self_:
+- Need to "see" what the recursion tree/tree we're traversing is for the problem. Sometimes I can't see that so recap all the existing problems to make sure you can draw it out.
+- Since recursion with memoisation...maybe possible to convert some of these solutions into DP solutions (but this is a problem for later, we're trying to practice backtracking)
 ### Week 4 - Arrays - Binary Search
 
 Binary search only works if you can assume input is monotonic, like you _need_ the total ordering on inputs. The problem I run into a lot of time with binary search is the whole off by one error and whether you've written the loop assuming inclusive or exclusive end points for bounds.
