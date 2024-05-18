@@ -81,7 +81,7 @@ backtrack():
 
 | Practice & apply | Retrospection notes |
 | --- | --- |
-| https://leetcode.com/problems/generate-parentheses/description/?envType=list&envId=xlere2g3 |  |
+| https://leetcode.com/problems/generate-parentheses/description/?envType=list&envId=xlere2g3 | Couldn't completely get this one on first go, but idea is still you either add a `(` or a add a `)` in one step, then delete it after backtracking; the issue is figuring out what the right condition for this should be. (Do some gardening on the the decision tree of adding `(` or `)` so we only look at strings satisfying the balance constraint) |
 | https://leetcode.com/problems/combination-sum-ii/description/?envType=list&envId=xlere2g3 |  |
 | https://leetcode.com/problems/permutations-ii/description/?envType=list&envId=xlere2g3 |  |
 | https://leetcode.com/problems/subsets-ii/description/?envType=list&envId=xlere2g3 |  |
