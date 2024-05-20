@@ -43,6 +43,10 @@ Something I've noticed: basically for a variable sliding window need to handle:
 
 Usually entirely apparent to me _how_ you could prove correctness, but that's not the point. Maybe they'll address this in 3121.
 
+*Added 2024-05-20*:
+- Often you are wanting to keep some kind of "statistic" about a window, and you have to figure out how to update this when the window moves (for memory saving reasons, rather than regenerating it every time. I mean statistic in the broadest sense as a summary of the most important feature of the window, e.g. it could be a letter frequency table)
+- I mean it's the same deal with a fixed width sliding window, the main difference is just that with every tick, you increment $i$ and $j$ by $1$ as the update rule for the window.
+
 ### Week 2 - Arrays - Two Pointers
 
 | Study solutions | Retrospection notes |
