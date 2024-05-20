@@ -3,6 +3,31 @@ class Solution:
     def subsets(self, nums: List[int]) -> List[List[int]]:
 
         """
+            2024-05-20
+            Better solution making the branching in partial solution tree better
+            We just want all nodes in partial solution tree
+        """
+
+
+        n = len(nums)
+        res = []
+
+        def search(i, subset):
+            if i >= n:
+                res.append(subset.copy())
+                return
+
+            # Either we add i or we don't to the subset
+            # but either way we restart search at i + 1
+            search(i + 1, subset + [nums[i]])
+            search(i + 1, subset)
+
+        search(0, [])
+        return res
+
+
+
+        """
             Working solution
             - Basically you have to encode the counting logic of
               "we can either add nums[i] or we don't do the subset"

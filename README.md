@@ -34,7 +34,8 @@ Notes about how to solve each problem/intuitions
 |~~https://leetcode.com/problems/minimum-window-substring/description/~~||
 |~~https://leetcode.com/problems/sliding-window-maximum/description/~~||
 
-**Some quick notes about variable length sliding window**
+### Some quick notes about implementing variable sliding windows
+We want to continually push the window to the right to "finish processing the whole array".
 
 Something I've noticed: basically for a variable sliding window need to handle:
  - Expanding right bound (usually just get it to keep inching forward) (You can use a for loop to do this, but to me I am still moving a pointer around so I prefer while)
@@ -61,28 +62,21 @@ Usually entirely apparent to me _how_ you could prove correctness, but that's no
 
 ### Week 3 - Arrays - Recursion & Backtracking
 
-There's a standard pattern to solving backtracking by recursion. Basically this is DFS but recursive implementation.
-```shell
-backtrack():
-    if stopping case:
-        do something
+> `TODO: Rewrite all your retrospection notes in terms of what the partial candidate tree looks like`. Because that is the essence of what backtracking is doing.
 
-    for next in candidate_list:
-        backtrack()
-```
 
 | Study solutions | Retrospection notes |
 | --- | --- |
 | https://leetcode.com/problems/letter-combinations-of-a-phone-number/description/?envType=list&envId=xlere2g3 | You're doing a DFS on a sort of prefix tree, and trying to print out all possible paths from root to any leaf node. So you'd use either a stack or recursion |
 | https://leetcode.com/problems/combination-sum/description/?envType=list&envId=xlere2g3 | More backtracking using DFS to traverse a "prefix tree". The issue is coming up with stopping case. |
-| https://leetcode.com/problems/permutations/description/?envType=list&envId=xlere2g3 | Use a set that has remaining elements and traverse through and leave one out for the next call. Basically if you can see how generating permutations as a tree works, you can write the back tracking to do it |
-| https://leetcode.com/problems/combinations/description/?envType=list&envId=xlere2g3 | Similar to permutation, but you only want to test adding elements to "right" of current element to the combo. You can either add number `i` or not add number `i` and let the recursion generate the branching of the tree. Stopping case when combination considered is length `k` |
-| https://leetcode.com/problems/subsets/description/?envType=list&envId=xlere2g3 | There's $2^n$  possible subsets, use a DFS to explore that and do backtracking on the tree. It's the loop _and_ recursion that generates the branching at each point|
+| https://leetcode.com/problems/permutations/description/?envType=list&envId=xlere2g3 | ~~Use a set that has remaining elements and traverse through and leave one out for the next call. Basically if you can see how generating permutations as a tree works, you can write the back tracking to do it~~ Search space is a set difference at every branch of the partial candidate graph, instead of a suffix. |
+| https://leetcode.com/problems/combinations/description/?envType=list&envId=xlere2g3 | ~~Similar to permutation, but you only want to test adding elements to "right" of current element to the combo. You can either add number `i` or not add number `i` and let the recursion generate the branching of the tree. Stopping case when combination considered is length `k`~~ Search space after adding `j` is `j + 1, ...` or `j+2, ....` or `j+3, ...` etc.  |
+| https://leetcode.com/problems/subsets/description/?envType=list&envId=xlere2g3 | ~~There's $2^n$  possible subsets, use a DFS to explore that and do backtracking on the tree. It's the loop _and_ recursion that generates the branching at each point~~ We just want all nodes in the partial solution tree |
 
 | Practice & apply | Retrospection notes |
 | --- | --- |
 | https://leetcode.com/problems/generate-parentheses/description/?envType=list&envId=xlere2g3 | Couldn't completely get this one on first go, but idea is still you either add a `(` or a add a `)` in one step, then delete it after backtracking; the issue is figuring out what the right condition for this should be. (Do some gardening on the the decision tree of adding `(` or `)` so we only look at strings satisfying the balance constraint) |
-| https://leetcode.com/problems/combination-sum-ii/description/?envType=list&envId=xlere2g3 |  |
+| https://leetcode.com/problems/combination-sum-ii/description/?envType=list&envId=xlere2g3 | Search space is `A[j+1:]` once you've included `A[j]`, not `A[j:]` . This is because you're not allowed to reinclude used elements! Also you want to prune off branches that consider `A[x:]` where `A[x] =A[x -1]` because this would also result in duplicates |
 | https://leetcode.com/problems/permutations-ii/description/?envType=list&envId=xlere2g3 |  |
 | https://leetcode.com/problems/subsets-ii/description/?envType=list&envId=xlere2g3 |  |
 | https://leetcode.com/problems/palindrome-partitioning/description/?envType=list&envId=xlere2g3 |  |
@@ -91,16 +85,28 @@ backtrack():
 | https://leetcode.com/problems/sudoku-solver/description/?envType=list&envId=xlere2g3 |  |
 
 
+### Some quick notes on backtracking
 
-_Notes to self_:
-- Need to "see" what the recursion tree/tree we're traversing is for the problem. Sometimes I can't see that so recap all the existing problems to make sure you can draw it out.
-- Since recursion with memoisation...maybe possible to convert some of these solutions into DP solutions (but this is a problem for later, we're trying to practice backtracking)
+What the hell is going on?
+- Is a bruteforce exploration of all possible candidate sets. Essentially DFS the partial candidate tree (if you happen across a node/partial candidate that violates some constraint/invariant then we know we can ignore that subtree, then just backtrack to the last place the partial candidate was still okay).
+    - _Contrast_: DP (problems have some dependencies which you can carefully traverse to avoid doing extra work), greedy (greedily go to local optima, but obviously exploration space might not be "convex" in some sense so not necessarily coincides with global optima)
+- I think the recursion only comes about because it's the easiest way to implement a DFS.
+
+The "backtracking" comes from adding/removing elements from a variable you use to store a current potential solution. But really we are just doing a DFS of a partial candidate tree, so you might as well just write the code to express partial candidates explicitly.
+
+Backtracking is used for constraint optimization e.g. job shop scheduling is a backtracking algorithm (?). Basically trying to find sets that satisfy constraints.
+
+(Others to try later if not done already)
+- (Useful basic ones): 39 combination sum, 40 combination sum ii ,78 subsets, 90 subsets ii, 46 permutations, 47 permutations ii (Classic backtracking problems. Basically can you map your problem to a graph traversal?)
+- 131, 784, 1087, 93, 1079
+
+It's not entirely apparent to me why sometimes if you sort the input first your exploration of the partial combination tree is nicer? But just know this as an idea.
+
+**What to call the function?** I think `search` is a better name than `backtrack`. Backtracking doesn't capture fact we're exploring partial combination tree with a DFS.
+
+
 ### Week 4 - Arrays - Binary Search
 
-Binary search only works if you can assume input is monotonic, like you _need_ the total ordering on inputs. The problem I run into a lot of time with binary search is the whole off by one error and whether you've written the loop assuming inclusive or exclusive end points for bounds.
-
-Need to revise reasoning about the invariants at play and why sometimes you end up in an infinite loop and not. I did write this up at some point but I'd forgotten.
-- Basically the issue is whether you treat array slices as inclusive/exclusive of upper bounds (and this changes what you set as `hi` and what the stopping condition of the while loop is (it should stop on an empty array: "continue until search space is exhausted"))
 
 | Study solutions | Retrospection notes |
 | --- | --- |
@@ -116,6 +122,12 @@ Need to revise reasoning about the invariants at play and why sometimes you end 
 | https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/description/?envType=list&envId=xleplgq3 |  |
 | https://leetcode.com/problems/search-a-2d-matrix/description/?envType=list&envId=xleplgq3 |  |
 | https://leetcode.com/problems/count-of-range-sum/description/?envType=list&envId=xleplgq3 |  |
+
+### Some quick notes on implementing binary searches
+Binary search only works if you can assume input is monotonic, like you _need_ the total ordering on inputs. The problem I run into a lot of time with binary search is the whole off by one error and whether you've written the loop assuming inclusive or exclusive end points for bounds.
+
+Need to revise reasoning about the invariants at play and why sometimes you end up in an infinite loop and not. I did write this up at some point but I'd forgotten.
+- Basically the issue is whether you treat array slices as inclusive/exclusive of upper bounds (and this changes what you set as `hi` and what the stopping condition of the while loop is (it should stop on an empty array: "continue until search space is exhausted"))
 
 ### Week 5 - Arrays - Stack
 

@@ -1,5 +1,58 @@
 class Solution:
     def letterCombinations(self, digits: str) -> List[str]:
+
+        """
+            It's not really all that much faster...
+        """
+        if not digits: return []
+
+        res = []
+        chars = ['', '', 'abc', 'def', 'ghi', 'jkl', 'mno', 'pqrs', 'tuv', 'wxyz']
+        word = ''
+
+        n = len(digits)
+
+        def backtrack(i):
+            nonlocal word
+            if i >= n:
+                res.append(word)
+                return
+
+            for char in chars[int(digits[i])]:
+                word += char
+                backtrack(i + 1)
+                word = word[:-1]
+
+        backtrack(0)
+
+        return res
+
+        """
+            Another solution after studying backtracking in more depth
+            - We're not operating on a single global variable
+            - So we don't need to add/remove from what is essentially a stack
+
+        """
+        if not digits: return []
+
+        res = []
+        chars = ['', '', 'abc', 'def', 'ghi', 'jkl', 'mno', 'pqrs', 'tuv', 'wxyz']
+
+        n = len(digits)
+
+        def backtrack(i, word):
+            if i >= n:
+                res.append(word)
+                return
+
+            for char in chars[int(digits[i])]:
+                backtrack(i + 1, word + char)
+
+        backtrack(0, '')
+
+        return res
+
+
         """
             Improved version that only does string operations
             but the intuition of how we're building the strings is the same

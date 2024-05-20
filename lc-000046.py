@@ -3,6 +3,26 @@ class Solution:
     def permute(self, nums):
 
         """
+            2024-05-20
+            Better solution that makes it more explicit that at each point in the potential candidate tree
+            the search space is a set difference of what's remaining and the element we've added.
+
+        """
+        res = []
+        nums = set(nums)
+
+        def search(perm, remaining):
+            if not remaining: # Exhausted candidates
+                res.append(perm)
+
+            for num in remaining:
+                search(perm + [num], remaining - set([num]))
+
+        search([], nums)
+
+        return res
+
+        """
             Second attempt
             - Trick is you need to be able to see how permutations could be generate as a tree structure
             - Start with an empty set:

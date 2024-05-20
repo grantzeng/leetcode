@@ -107,7 +107,7 @@ _Maybe_ come back to things later re: why Kadane's algorithm works (can you stat
 We had a good run, solved two sliding window problems using what I learnt yesterday. So let's just leave it at that.
 
 
-# 2024-50-17 Fri
+# 2024-05-07 Fri
 I think I sort of get sliding window now, especially variable length. Next one to focus on is recursion and back tracking.
 
 I think my strategy will be:
@@ -119,3 +119,42 @@ I think my strategy will be:
     - Go through all of neetcode.
 
 In an interview I assume you'd have to explain your logic as well, so...we will deal with this later, this is a different problem.
+
+
+# 2024-05-19 Sun
+Trying to figure out backtracking.
+
+### On backtracking and all the backtracking confusion I'm having
+_Notes to self_:
+- Need to "see" what the recursion tree/tree we're traversing is for the problem. Sometimes I can't see that so recap all the existing problems to make sure you can draw it out.
+- Since recursion with memoisation...maybe possible to convert some of these solutions into DP solutions (but this is a problem for later, we're trying to practice backtracking)
+
+Some useful questions:
+- 39 combination sum, 40 combination sum ii ,78 subsets, 90 subsets ii, 46 permutations, 47 permutations ii (Classic backtracking problems. Basically can you map your problem to a graph traversal?)
+- 131, 784, 1087, 93, 1079
+
+The problem I think you're having at the moment is can you make the implicit tree when doing backtracking, into an explicit tree?
+
+
+# 2024-05-20 Mon
+
+### Figuring out backtracking
+
+Backtracking is a bruteforce algorithm.
+
+Problem with greedy: only finds local minima/maxima.
+Problem with dynamic programming: sometimes your subproblems are independent of each other.
+
+Something to do with subproblem dependency graph?
+
+
+### Backtracking
+Mapping the search space as a tree of partial candidates, which you then dfs.
+- Basically if a partial candidate violates a constraint, then we can just prune that branch and backtrack.
+
+
+I'm going to redo all the practice problems for backtracking, then try to tackle some of the newer problems.
+- Just conceptually do it with recursion. (We can test your understanding later by doing it with a stack.)
+
+39 is weird
+- I don't quite get why my presort solution is wrong
