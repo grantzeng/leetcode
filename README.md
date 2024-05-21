@@ -85,7 +85,7 @@ Usually entirely apparent to me _how_ you could prove correctness, but that's no
 | https://leetcode.com/problems/subsets-ii/description/?envType=list&envId=xlere2g3 |  |
 | https://leetcode.com/problems/palindrome-partitioning/description/?envType=list&envId=xlere2g3 |  |
 | https://leetcode.com/problems/target-sum/description/?envType=list&envId=xlere2g3 |  |
-| https://leetcode.com/problems/combination-sum-iii/description/?envType=list&envId=xlere2g3 |  |
+| https://leetcode.com/problems/combination-sum-iii/description/?envType=list&envId=xlere2g3 | Basically same as Combination 1. If you include $A[i]$ then remaining search space is $A[i + 1:]$ ($A$ can just be implicit by using a `range(i + 1, 10)`) |
 | https://leetcode.com/problems/sudoku-solver/description/?envType=list&envId=xlere2g3 |  `HARD` |
 
 

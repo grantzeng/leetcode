@@ -158,3 +158,7 @@ I'm going to redo all the practice problems for backtracking, then try to tackle
 
 39 is weird
 - I don't quite get why my presort solution is wrong
+
+
+### 2024-05-21 Tue
+I'm stuck on 47 and 90. The issue is how to avoid duplicates when searching.
