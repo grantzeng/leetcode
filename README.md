@@ -80,13 +80,13 @@ Usually entirely apparent to me _how_ you could prove correctness, but that's no
 | Practice & apply | Retrospection notes |
 | --- | --- |
 | https://leetcode.com/problems/generate-parentheses/description/?envType=list&envId=xlere2g3 | Couldn't completely get this one on first go, but idea is still you either add a `(` or a add a `)` in one step, then delete it after backtracking; the issue is figuring out what the right condition for this should be. (Do some gardening on the the decision tree of adding `(` or `)` so we only look at strings satisfying the balance constraint) |
-| https://leetcode.com/problems/combination-sum-ii/description/?envType=list&envId=xlere2g3 | Search space is `A[j+1:]` once you've included `A[j]`, not `A[j:]` . This is because you're not allowed to reinclude used elements! Also you want to prune off branches that consider `A[x:]` where `A[x] =A[x -1]` because this would also result in duplicates |
+| https://leetcode.com/problems/combination-sum-ii/description/?envType=list&envId=xlere2g3 | Search space is `A[j+1:]` once you've included `A[j]`, not `A[j:]` . This is because you're not allowed to reinclude used elements! Also you want to prune off branches that consider `A[x:]` where `A[x] =A[x-1]` because this would also result in duplicates |
 | https://leetcode.com/problems/permutations-ii/description/?envType=list&envId=xlere2g3 |  |
 | https://leetcode.com/problems/subsets-ii/description/?envType=list&envId=xlere2g3 |  |
 | https://leetcode.com/problems/palindrome-partitioning/description/?envType=list&envId=xlere2g3 |  |
 | https://leetcode.com/problems/target-sum/description/?envType=list&envId=xlere2g3 |  |
 | https://leetcode.com/problems/combination-sum-iii/description/?envType=list&envId=xlere2g3 |  |
-| https://leetcode.com/problems/sudoku-solver/description/?envType=list&envId=xlere2g3 |  |
+| https://leetcode.com/problems/sudoku-solver/description/?envType=list&envId=xlere2g3 |  `HARD` |
 
 
 ### Some quick notes on backtracking
