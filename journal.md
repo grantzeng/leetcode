@@ -162,3 +162,5 @@ I'm going to redo all the practice problems for backtracking, then try to tackle
 
 ### 2024-05-21 Tue
 I'm stuck on 47 and 90. The issue is how to avoid duplicates when searching.
+
+We'll come back to 47 and 90. Look at the study problems and think about how you can draw the partial solution tree to avoid traversing duplicate sets. How do duplicates arise?
