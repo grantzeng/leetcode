@@ -160,12 +160,19 @@ I'm going to redo all the practice problems for backtracking, then try to tackle
 - I don't quite get why my presort solution is wrong
 
 
-### 2024-05-21 Tue
+# 2024-05-21 Tue
 I'm stuck on 47 and 90. The issue is how to avoid duplicates when searching.
 
 We'll come back to 47 and 90. Look at the study problems and think about how you can draw the partial solution tree to avoid traversing duplicate sets. How do duplicates arise?
 
-### 2024-05-22 Wed
+# 2024-05-22 Wed
 We'll work on 47 and 90
 
 Seems like if you're having to deal with duplicates, sorting the input _seems_ like a good idea.
+
+### A useful link.
+https://algo.monster/problems/stats
+
+The issue is prioritisation and deciding what not to learn. What has most ROI is the real question.
+
+> It's 10:36am now, I think we just have to stop, but at least you have clue to puzzle out for how to solve 90 (need to draw out the right partial solution tree that avoids traversing duplicates altogether)

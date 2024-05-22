@@ -82,7 +82,7 @@ Usually entirely apparent to me _how_ you could prove correctness, but that's no
 | https://leetcode.com/problems/generate-parentheses/description/?envType=list&envId=xlere2g3 | Couldn't completely get this one on first go, but idea is still you either add a `(` or a add a `)` in one step, then delete it after backtracking; the issue is figuring out what the right condition for this should be. (Do some gardening on the the decision tree of adding `(` or `)` so we only look at strings satisfying the balance constraint) |
 | https://leetcode.com/problems/combination-sum-ii/description/?envType=list&envId=xlere2g3 | Search space is `A[j+1:]` once you've included `A[j]`, not `A[j:]` . This is because you're not allowed to reinclude used elements! Also you want to prune off branches that consider `A[x:]` where `A[x] =A[x-1]` because this would also result in duplicates |
 | https://leetcode.com/problems/permutations-ii/description/?envType=list&envId=xlere2g3 |  |
-| https://leetcode.com/problems/subsets-ii/description/?envType=list&envId=xlere2g3 | Partial solution tree branch is based on "do we include _any number_ of $i$ or not" rather than "do we include `num[i]` or not". This requires you to sort the input |
+| https://leetcode.com/problems/subsets-ii/description/?envType=list&envId=xlere2g3 | Partial solution tree branch is based on "do we include _any number_ of $i$ or not" rather than "do we include `num[i]` or not". Hence sorting input.  |
 | https://leetcode.com/problems/palindrome-partitioning/description/?envType=list&envId=xlere2g3 |  |
 | https://leetcode.com/problems/target-sum/description/?envType=list&envId=xlere2g3 |  |
 | https://leetcode.com/problems/combination-sum-iii/description/?envType=list&envId=xlere2g3 | Basically same as Combination 1. If you include $A[i]$ then remaining search space is $A[i + 1:]$ ($A$ can just be implicit by using a `range(i + 1, 10)`) |
@@ -94,6 +94,7 @@ Usually entirely apparent to me _how_ you could prove correctness, but that's no
 What the hell is going on?
 - Is a bruteforce exploration of all possible candidate sets. Essentially DFS the partial candidate tree (if you happen across a node/partial candidate that violates some constraint/invariant then we know we can ignore that subtree, then just backtrack to the last place the partial candidate was still okay).
     - _Contrast_: DP (problems have some dependencies which you can carefully traverse to avoid doing extra work), greedy (greedily go to local optima, but obviously exploration space might not be "convex" in some sense so not necessarily coincides with global optima)
+> Sometimes the difficulty is conceptualising what the tree looks like (if we care about duplicates, then branching might be based on include/exclude any number of an element, rather than include/exclude position $i$ of input. Useful to sort input here if so).
 - I think the recursion only comes about because it's the easiest way to implement a DFS.
 
 The "backtracking" comes from adding/removing elements from a variable you use to store a current potential solution. But really we are just doing a DFS of a partial candidate tree, so you might as well just write the code to express partial candidates explicitly.
