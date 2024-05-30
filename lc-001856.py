@@ -1,5 +1,10 @@
 class Solution:
     def maxSumMinProduct(self, nums: List[int]) -> int:
+
+        """
+            Going to have a look at 496 to practice monotonic stack
+
+        """
         
         """
             2024-05-30

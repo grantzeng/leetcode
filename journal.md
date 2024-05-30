@@ -186,3 +186,5 @@ I think realistically, we can only expect to solve one question a day. It's not 
 I think I'll move on to the training questions for stack techniques with arrays, kind of tired of doing the same topic over and over again. Should try to make a checklist of some standard techniques/toolbox of things you can chuck at problems at some point, I think part of the issue is it feels like all you have is a blunt spoon to work with quite often.
 
 The advice I've read is to memorise the intuition and then practice using your intuition to get something to work.
+### 11:13am
+Need to move on to what I need to do for the rest of the day; don't have all the time in the world to look at monotonic stacks and how to use them

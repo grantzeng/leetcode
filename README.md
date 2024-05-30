@@ -154,9 +154,10 @@ Need to revise reasoning about the invariants at play and why sometimes you end 
 | https://leetcode.com/problems/number-of-visible-people-in-a-queue/description/ |  |
 
 
-### Generally useful technique:
+##
 - If you're having to sum subarrays, precomputed prefix sums will let you do this in $O(1)$
-
+### Monotonic stacks
+- Look at 496 to get an idea of how monotonic stacks can be useful?
 
 ### Week 6 - Arrays - Greedy
 
