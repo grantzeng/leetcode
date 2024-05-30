@@ -176,3 +176,13 @@ https://algo.monster/problems/stats
 The issue is prioritisation and deciding what not to learn. What has most ROI is the real question.
 
 > It's 10:36am now, I think we just have to stop, but at least you have clue to puzzle out for how to solve 90 (need to draw out the right partial solution tree that avoids traversing duplicates altogether)
+
+
+# 2024-05-30 Thu
+Life has got in the way and I've ended up skipping a few days.
+
+I think realistically, we can only expect to solve one question a day. It's not exactly a matter of urgency that you learn this skill either. But it is important.
+
+I think I'll move on to the training questions for stack techniques with arrays, kind of tired of doing the same topic over and over again. Should try to make a checklist of some standard techniques/toolbox of things you can chuck at problems at some point, I think part of the issue is it feels like all you have is a blunt spoon to work with quite often.
+
+The advice I've read is to memorise the intuition and then practice using your intuition to get something to work.

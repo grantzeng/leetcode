@@ -139,7 +139,7 @@ Need to revise reasoning about the invariants at play and why sometimes you end 
 | Study solutions | Retrospection notes |
 | --- | --- |
 | https://leetcode.com/problems/valid-parentheses/description/ | It's all about tokens. (And use a hash table to keep track of things matching up) |
-| https://leetcode.com/problems/maximum-subarray-min-product/description/ |  |
+| https://leetcode.com/problems/maximum-subarray-min-product/description/ | I definitely had zero idea about how to solve this, so looked up the intuition: monotonic stack to find for what subarray $A[i:j]$ is $A[k]$ minimal for + prefix sums to get subarray sums in constant time. (Very difficult because never seen these tools before.). (There are other ways of doing this problem apparently.) |
 | https://leetcode.com/problems/minimum-add-to-make-parentheses-valid/description/ |  |
 | https://leetcode.com/problems/merge-intervals/description/ |  |
 | https://leetcode.com/problems/maximum-frequency-stack/description/ |  |
@@ -152,6 +152,11 @@ Need to revise reasoning about the invariants at play and why sometimes you end 
 | https://leetcode.com/problems/132-pattern/description/ |  |
 | https://leetcode.com/problems/largest-rectangle-in-histogram/description/ |  |
 | https://leetcode.com/problems/number-of-visible-people-in-a-queue/description/ |  |
+
+
+### Generally useful technique:
+- If you're having to sum subarrays, precomputed prefix sums will let you do this in $O(1)$
+
 
 ### Week 6 - Arrays - Greedy
 
