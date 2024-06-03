@@ -188,3 +188,14 @@ I think I'll move on to the training questions for stack techniques with arrays,
 The advice I've read is to memorise the intuition and then practice using your intuition to get something to work.
 ### 11:13am
 Need to move on to what I need to do for the rest of the day; don't have all the time in the world to look at monotonic stacks and how to use them
+
+
+# 2024-06-03 Mon
+> Wk2, 24T2
+
+Leetcoding
+
+
+Somehow got `56` right on the spot without too much fuss.
+
+Sorting your input seems to turn up a lot, maybe you should make a study of sorting algorithms again, since you're just being lazy in Python and calling `.sort()` all the time.
