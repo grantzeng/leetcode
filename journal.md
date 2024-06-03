@@ -193,9 +193,11 @@ Need to move on to what I need to do for the rest of the day; don't have all the
 # 2024-06-03 Mon
 > Wk2, 24T2
 
-Leetcoding
-
-
 Somehow got `56` right on the spot without too much fuss.
 
-Sorting your input seems to turn up a lot, maybe you should make a study of sorting algorithms again, since you're just being lazy in Python and calling `.sort()` all the time.
+Sorting your input seems to turn up a lot, maybe you should make a study of sorting algorithms again, since you're just being lazy in Python and calling `.sort()` all the time. The idea was that you could implement this in C if you had to.
+
+> Actually I kind of wonder if it might be interesting to implement everything in Haskell just make you think in a different way...but this is a project for later.
+
+
+The advice has been: if you can't figure it out in 15 minutes, then just look up the solution -- you'll build up intuition as you go.

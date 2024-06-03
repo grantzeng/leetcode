@@ -140,8 +140,8 @@ Need to revise reasoning about the invariants at play and why sometimes you end 
 | --- | --- |
 | https://leetcode.com/problems/valid-parentheses/description/ | It's all about tokens. (And use a hash table to keep track of things matching up) |
 | https://leetcode.com/problems/maximum-subarray-min-product/description/ | I definitely had zero idea about how to solve this, so looked up the intuition: monotonic stack to find for what subarray $A[i:j]$ is $A[k]$ minimal for + prefix sums to get subarray sums in constant time. (Very difficult because never seen these tools before.). (There are other ways of doing this problem apparently.) `TODO: COME BACK TO MONOTONIC STACKS LATER` |
-| https://leetcode.com/problems/minimum-add-to-make-parentheses-valid/description/ |  |
-| https://leetcode.com/problems/merge-intervals/description/ | Pay for a sort!  |
+| https://leetcode.com/problems/minimum-add-to-make-parentheses-valid/description/ | "Conceptual stack". See `#20` if you don't know what I mean |
+| https://leetcode.com/problems/merge-intervals/description/ | Pay for a sort then do a single pass. |
 | https://leetcode.com/problems/maximum-frequency-stack/description/ | `HARD` |
 
 | Practice & apply | Retrospection notes |
