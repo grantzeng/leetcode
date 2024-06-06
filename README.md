@@ -184,18 +184,18 @@ Need to revise reasoning about the invariants at play and why sometimes you end 
 | https://leetcode.com/problems/minimum-depth-of-binary-tree/description/?envType=list&envId=xlepfebm | If doing BFS iterative solution, just track the node depth with the node in the queue rather than fiddling with a single variable. (For DFS solution, need to visualise how you're adding 1's and minning the sums)|
 | https://leetcode.com/problems/populating-next-right-pointers-in-each-node/description/?envType=list&envId=xlepfebm | Try `102` if you forgot how to do level order traversal. (Also don't forget to return the data structure you're modifying, d'oh.) |
 | https://leetcode.com/problems/binary-tree-zigzag-level-order-traversal/description/?envType=list&envId=xlepfebm | It's just level order traversal except you reverse the order in which you print the values if the level is odd |
-| https://leetcode.com/problems/binary-tree-level-order-traversal-ii/description/?envType=list&envId=xlepfebm |  |
+| https://leetcode.com/problems/binary-tree-level-order-traversal-ii/description/?envType=list&envId=xlepfebm | Just do a level order traversal and keep the results in reverse |
 
 | Practice & apply | Retrospection notes |
 | --- | --- |
-| https://leetcode.com/problems/binary-tree-level-order-traversal/description/?envType=list&envId=xlepfebm |  |
+| https://leetcode.com/problems/binary-tree-level-order-traversal/description/?envType=list&envId=xlepfebm | (Just go learn the algorithm)  |
 | https://leetcode.com/problems/average-of-levels-in-binary-tree/description/?envType=list&envId=xlepfebm |  |
 | https://leetcode.com/problems/populating-next-right-pointers-in-each-node-ii/description/?envType=list&envId=xlepfebm |  |
 | https://leetcode.com/problems/binary-tree-right-side-view/description/?envType=list&envId=xlepfebm |  |
 | https://leetcode.com/problems/all-nodes-distance-k-in-binary-tree/description/?envType=list&envId=xlepfebm |  |
 
-### Some notes on trees: 
-I think it might be possible to solve all these with a DFS and recursion actually. Thinking at some future point it could be interesting to see if I could rewrite everything in Haskell. 
+### Things to do: 
+- Reimplement all these with a DFS later, the BFS algorithm you use is _basically_ the same in every question. 
 
 ### Weeks 8 - 10 Trees - DFS
 
