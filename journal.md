@@ -201,3 +201,7 @@ Sorting your input seems to turn up a lot, maybe you should make a study of sort
 
 
 The advice has been: if you can't figure it out in 15 minutes, then just look up the solution -- you'll build up intuition as you go.
+
+
+# 2024-06-06 Thu 
+Brainspace is just completely zapped right now, so probably better not to try tackle new problems. Skip ahead to some topics you've seen before and see if you can do them on the spot. 

@@ -181,7 +181,7 @@ Need to revise reasoning about the invariants at play and why sometimes you end 
 
 | Study solutions | Retrospection notes |
 | --- | --- |
-| https://leetcode.com/problems/minimum-depth-of-binary-tree/description/?envType=list&envId=xlepfebm |  |
+| https://leetcode.com/problems/minimum-depth-of-binary-tree/description/?envType=list&envId=xlepfebm | If doing BFS iterative solution, just track the node depth with the node in the queue rather than fiddling with a single variable. (For DFS solution, need to visualise how you're adding 1's and minning the sums)|
 | https://leetcode.com/problems/populating-next-right-pointers-in-each-node/description/?envType=list&envId=xlepfebm |  |
 | https://leetcode.com/problems/binary-tree-zigzag-level-order-traversal/description/?envType=list&envId=xlepfebm |  |
 | https://leetcode.com/problems/binary-tree-level-order-traversal-ii/description/?envType=list&envId=xlepfebm |  |
