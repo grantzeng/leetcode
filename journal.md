@@ -205,3 +205,16 @@ The advice has been: if you can't figure it out in 15 minutes, then just look up
 
 # 2024-06-06 Thu 
 Brainspace is just completely zapped right now, so probably better not to try tackle new problems. Skip ahead to some topics you've seen before and see if you can do them on the spot. 
+
+
+# 2024-06-07 Fri
+We're probably good with BFS/DFS stuff, it's actually a lot of the array stuff that I'm not 100% down with.
+
+### 134
+Try this on again and work through how it's solved with a greedy algorithm. 
+
+> Reminder we're doing this in Python because I want to focus on grokking the algorithmic thinking (and not getting stuck in implementation issues)
+
+> I think my general plan is: finish this list. Then go through neetcode's list; and that should give me general coverage of the patterns I'm likely to see.
+
+> General goal is: aim to be able to be comfortable at solving any medium question within 30 minutes (i.e. within programming interview environment)
