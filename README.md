@@ -163,7 +163,7 @@ Need to revise reasoning about the invariants at play and why sometimes you end 
 
 | Study solutions | Retrospection notes |
 | --- | --- |
-| https://leetcode.com/problems/gas-station/description/ | (Baffling, come back later) |
+| https://leetcode.com/problems/gas-station/description/ | ~~(Baffling, come back later)~~ I don't get why this one is greedy, this really should be a math question and depends on you recognising what the constraints are. The only way I think I could possibly come up with the algorithm on my own is to find conditions for solution existence, then looking at how that constraint affects how one would find a solution. |
 | https://leetcode.com/problems/largest-number/description/ |  |
 | https://leetcode.com/problems/remove-duplicate-letters/description/ |  |
 | https://leetcode.com/problems/remove-k-digits/description/ |  |
@@ -176,6 +176,10 @@ Need to revise reasoning about the invariants at play and why sometimes you end 
 | https://leetcode.com/problems/valid-triangle-number/description/ |  |
 | https://leetcode.com/problems/increasing-triplet-subsequence/description/ |  |
 | https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/description/ |  |
+
+
+### Notes to self: 
+This is a new technique to me, so couldn't solve any of the training questions on the spot.
 
 ### Week 7 - Trees - BFS
 

@@ -1,13 +1,58 @@
 class Solution:
     def canCompleteCircuit(self, gas: List[int], cost: List[int]) -> int:
+
+        """
+            2024-06-09
+            In some more compact code
+        
+        """
+        net_costs = [ g - s for g,s in zip(gas, cost)]
+        if sum(net_costs) < 0: return -1
+        tank, start = 0, 0 
+        for i, net_cost in enumerate(net_costs):
+            # Add cost of getting to station i and then checking if it's possible
+            tank += net_cost
+            if tank < 0: 
+                # Can't get to station i
+                start, tank = i + 1, 0 
+        return start
+        
         
         """
             2024-06-09
             O(n) solution
             - it's apparent we're doing a lot of extra computation we don't need, but
               not immediately clear where we can save on work. 
+
+            The O(n) solution relies on proofs...and observations on the problem. Not sure 
+            how generalisable this is. 
+
+            ... after spending _far_ too much time writing the proof, the solution makes more sense
         
         """
+        # Existence check 
+        if sum(gas) < sum(cost):
+            # From Claim 1b, we know a solution can't exist 
+            # - 1a does NOT logically imply 1b, you have to prove the bloody thing!
+            return -1
+        
+        # Looking for a solution 
+        # From Claim 3, we know if we have a path on A[i:n], we don't have to check the first part
+        # - So we just check going forward
+        tank = 0
+        start = 0
+        for i in range(len(gas)): 
+            tank += gas[i] - cost[i]
+
+            if tank < 0:
+                # From Claim 2, we know if we fail at station i, 
+                # then we can't possibly start a loop at any station 0 to i
+                # So we jump to checking at station i + 1
+                start = i + 1 
+                tank = 0         
+        return start
+
+
 
         """
             2024-06-09
