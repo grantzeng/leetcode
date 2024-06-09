@@ -218,3 +218,5 @@ Try this on again and work through how it's solved with a greedy algorithm.
 > I think my general plan is: finish this list. Then go through neetcode's list; and that should give me general coverage of the patterns I'm likely to see.
 
 > General goal is: aim to be able to be comfortable at solving any medium question within 30 minutes (i.e. within programming interview environment)
+
+Still don't really understand why we can do this in a single pass.

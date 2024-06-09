@@ -163,7 +163,7 @@ Need to revise reasoning about the invariants at play and why sometimes you end 
 
 | Study solutions | Retrospection notes |
 | --- | --- |
-| https://leetcode.com/problems/gas-station/description/ |  |
+| https://leetcode.com/problems/gas-station/description/ | (Baffling, come back later) |
 | https://leetcode.com/problems/largest-number/description/ |  |
 | https://leetcode.com/problems/remove-duplicate-letters/description/ |  |
 | https://leetcode.com/problems/remove-k-digits/description/ |  |
