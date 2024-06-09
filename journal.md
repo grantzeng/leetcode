@@ -220,3 +220,9 @@ Try this on again and work through how it's solved with a greedy algorithm.
 > General goal is: aim to be able to be comfortable at solving any medium question within 30 minutes (i.e. within programming interview environment)
 
 Still don't really understand why we can do this in a single pass.
+
+# 2024-06-09 Sun 
+I think go back to working on the greedy questions. Leave the "other stuff" like dfs/bfs/things we know for later or when you have a day where you feel like you don't want to do anything. 
+
+### 134
+Spent way too much time on understanding this question. The lesson seems to be: paying attention to constraints on whether solution exists or not, and figuring out how that constraint might affect how you go about finding a solution.
