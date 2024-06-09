@@ -22,7 +22,11 @@ Is about existence/non-existence of solutions. This turns up in the code as an e
 > In English, this says if the total gas available is greater than the total cost, there must exist a starting position $j$ where we can do a cycle. Intuitively this seems like it should be the case, but it's not obvious how to prove this.
 
 Suppose for the purposes of contradiction there exists _no_ starting station where we can traverse a cycle, but 
-$$\sum_{i} g_i \geq \sum_{i} c_i$$ 
+
+$$
+\sum_{i} g_i \geq \sum_{i} c_i
+$$ 
+
 holds.
 
 This means, for any arbitrary starting station $j$ there must be some station $k$ s.t. that the tank becomes negative and for which we can't traverse the link $k - 1$ to $k$ i.e.: 
@@ -30,13 +34,20 @@ $$g_{jk} - c_{jk} < 0$$
 
 Now, clearly
 
-$$\sum_{i} g_i = g_{jk} + g_{kj}$$
-$$\sum_{i} c_i  = c_{jk} + c_{kj}$$
+$$
+\sum_{i} g_i = g_{jk} + g_{kj}
+$$
+
+$$
+\sum_{i} c_i  = c_{jk} + c_{kj}
+$$
 
 But from the assumption about the total gas and total cost, this implies that 
+
 $$
 g_{kj} - c_{kj} \geq g_{jk} - c_{jk}
 $$
+
 Hence if we start instead at station $k$, we can loop back to station $j$ yet have enough fuel remaining to traverse from $j$ to $k$, which is a contradiction because we assumed this was not possible. 
 
 Therefore there must exist some station $j$ where a route is possible. $\square$
@@ -46,7 +57,11 @@ Therefore there must exist some station $j$ where a route is possible. $\square$
 > I think this is just as important as the above, but the reference skips this. Basically the point of Claim 1a and 1b is we have some total constraints on solution existence. 
 
 Suppose for the purposes of contradiction that there is a station $j$ s.t. a cycle is possible i.e. 
-$$g_{jj} - c_{jj} \geq 0$$
+
+$$
+g_{jj} - c_{jj} \geq 0
+$$
+
 Chose some arbitrary station $k$ on the path. Now clearly
 
 $$
@@ -57,6 +72,7 @@ $$
 $$
 
 So substituting this back we get
+
 $$
 \begin{align*}
     \sum_{i} g_i -\sum_{i} c_i &\geq 0  \\ 
@@ -77,22 +93,24 @@ But this is a contradition. Therefore there cannot exist any such station. $\squ
 Suppose for the purposes of contradition there is an arbitrary intermediate station $k \in \{i + 1, ..., j - 1\}$ where it _is_ possible to traverse to $j$, yet $g_{ij} < c_{ij}$. 
 
 Now since route is possible from the intermediate station we have: 
+
 $$
     g_{kj} \geq c_{kj}
 $$
 
 Also, $g_{kj} = g_{kj-1} + g_{j-1j}$ and $c_{kj} = c_{kj-1} + c_{j-1j}$ but since from the assumption, $j-1$ is reachable from $k$, $g_{kj-1} - c_{kj-1} \geq 0$ we must have 
+
 $$
     g_{j-1j} \geq c_{j-1j}
 $$
 
 Since $j$ is not reachable from $i$ (i.e. our assumption $g_{ij} < c_{ij}$) but $j-1$ is (so $g_{ij-1} \geq c_{ij-1}$), and using the fact $g_{ij} = g_{ij-1} + g_{j-1j}$ and similarly with cost, we can derive that:
+
 $$
     g_{j-1j} < c_{j-1j}
 $$
+
 But clearly this is a contradiction, so there cannot exist such intermediate station $k$.  $\square$
-
-
 
 ### Claim 3: $\sum_{i} g_i \geq \sum_{i} c_i$  and $g_{jk} \geq c_{jk}$ $\implies$ $g_{kj} \geq c_{kj}$
 
@@ -103,13 +121,14 @@ But clearly this is a contradiction, so there cannot exist such intermediate sta
 This proof is easy. 
 
 Starting with the constraint, we have
-$$
 
+$$
 \begin{align*}
 \sum_{i} g_i &\geq \sum_{i} c_i \\
 g_{jk} + g_{kj} &\geq c_{jk} + c_{kj}
 \end{align*}
 $$
+
 But from the other assumption $g_{jk} \geq c_{jk}$, this implies that
 
 $$
