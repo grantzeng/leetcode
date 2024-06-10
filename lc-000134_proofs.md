@@ -15,7 +15,7 @@ Suppose we have $n$ stations in a cycle, each with gas $g_i$ for a cost $c_i$.
 Let $g_{ij}$ and $c_{ij}$ denote the total cost and total gas of traversing clockwise w.l.o.g. from station $i$ to station $j$
 
 ### Claim 1
-Is about existence/non-existence of solutions. This turns up in the code as an existence check at the start.
+Is about existence/non-existence of solutions. This turns up in the code as an existence check at the start. 
 
 ### Claim 1a: $\sum_{i} g_i \geq \sum_{i} c_i \implies \exists j: g_{jj} - c_{jj} \geq 0$
 
