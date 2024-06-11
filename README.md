@@ -164,7 +164,7 @@ Need to revise reasoning about the invariants at play and why sometimes you end 
 | Study solutions | Retrospection notes |
 | --- | --- |
 | https://leetcode.com/problems/gas-station/description/ | ~~(Baffling, come back later)~~ I don't get why this one is greedy, this really should be a math question and depends on you recognising what the constraints are. The only way I think I could possibly come up with the algorithm on my own is to find conditions for solution existence, then looking at how that constraint affects how one would find a solution. |
-| https://leetcode.com/problems/largest-number/description/ | It's obviously greedy, you want the largest number in the largest positions, but you need a custom comparator to compare things like "3" vs "34" vs "33" as to what's the best position |
+| https://leetcode.com/problems/largest-number/description/ | It's obviously greedy, you want the largest number in the largest positions, but you need a custom comparator to compare things like "3" vs "34" vs "33" as to what's the best position. (Will need to come back to this - can you implement your own parser and sorting algorithms and not rely on Python? You could just strip zeros from the front of the sorted list as well) |
 | https://leetcode.com/problems/remove-duplicate-letters/description/ |  |
 | https://leetcode.com/problems/remove-k-digits/description/ |  |
 | https://leetcode.com/problems/integer-replacement/description/ |  |

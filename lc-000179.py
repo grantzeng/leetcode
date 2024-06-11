@@ -5,6 +5,8 @@ class Solution:
             The whole nonsensical oneliner. 
             
             - TODO: rewrite in C where you have to deal with your own parsing problems and implementation of the sort
+
+            - Could possibly replace the int -> str -> int with just left stripping all except 1 zero on the sorted list
         """
         import functools
         return str(int("".join(sorted(map(str, nums), key=functools.cmp_to_key(lambda a, b: -1 if a + b > b + a else 1)))))
