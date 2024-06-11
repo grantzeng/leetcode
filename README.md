@@ -164,7 +164,7 @@ Need to revise reasoning about the invariants at play and why sometimes you end 
 | Study solutions | Retrospection notes |
 | --- | --- |
 | https://leetcode.com/problems/gas-station/description/ | ~~(Baffling, come back later)~~ I don't get why this one is greedy, this really should be a math question and depends on you recognising what the constraints are. The only way I think I could possibly come up with the algorithm on my own is to find conditions for solution existence, then looking at how that constraint affects how one would find a solution. |
-| https://leetcode.com/problems/largest-number/description/ |  |
+| https://leetcode.com/problems/largest-number/description/ | It's obviously greedy, you want the largest number in the largest positions, but you need a custom comparator to compare things like "3" vs "34" vs "33" as to what's the best position |
 | https://leetcode.com/problems/remove-duplicate-letters/description/ |  |
 | https://leetcode.com/problems/remove-k-digits/description/ |  |
 | https://leetcode.com/problems/integer-replacement/description/ |  |
@@ -274,3 +274,8 @@ This is a new technique to me, so couldn't solve any of the training questions o
 | https://leetcode.com/problems/cheapest-flights-within-k-stops/description/ |  |
 | https://leetcode.com/problems/critical-connections-in-a-network/description/ |  |
 | https://leetcode.com/problems/shortest-path-to-get-all-keys/description/?envType=list&envId=xler60c5 |  |
+
+
+### Week 13 - Potpourri
+> Added this myself as checklist of non-urgent things to do 
+Reimplement all sorts (i.e. at this point you're using `sort()` a lot but you should probably know for example how to implement the sort in C)

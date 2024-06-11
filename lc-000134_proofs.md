@@ -114,6 +114,8 @@ But clearly this is a contradiction, so there cannot exist such intermediate sta
 
 ### Claim 3: $\sum_{i} g_i \geq \sum_{i} c_i$  and $g_{jk} \geq c_{jk}$ $\implies$ $g_{kj} \geq c_{kj}$
 
+> TODO: Something doesn't seem quite right about this proof
+
 > The moral of this is you don't have to check the first part of the array again when looping back, if you know the second half works.
 
 > This is a highly unintuitive property but is the basis of the $O(n)$ solution. Seems like one might converge on it accidentally if you think about the existence of a solution constraint. 

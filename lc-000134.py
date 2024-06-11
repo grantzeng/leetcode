@@ -37,8 +37,8 @@ class Solution:
             return -1
         
         # Looking for a solution 
-        # From Claim 3, we know if we have a path on A[i:n], we don't have to check the first part
-        # - So we just check going forward
+        # From Claim 3, we know if we have a path on A[i:n], we don't have to check A[:i]
+        # - so we don't bother looping back
         tank = 0
         start = 0
         for i in range(len(gas)): 
