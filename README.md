@@ -179,17 +179,21 @@ Need to revise reasoning about the invariants at play and why sometimes you end 
 
 
 ### Notes to self: 
-This is a new algorithms technique for me.
+Greedy is a new algorithm technique to me. 
 
 See COMP3121 lectures if you can find any copies online re: how to recognise greedy. The algorithms are amazingly simple, yet...a lot of cleverness. I think I just need a few more worked examples.
 - For `316` it's the same as `402`. You just have strings that base-26 instead of base-10, the principle of wanting the front of the string to be monotonic increasing is the same. 
 - `719` is basically decreasing lexical sort. So `'9' > '35'` and `'35' > 33 > 3_'` I think. 
 
 I think there's two things for me to do here:
-(1) Need more exposure to examples of using greedy methods (it seems like it's a very general and useful technique but requires you to recognise some substructure in the problem for it to work. I think for remove-k you'd have to play around with the problem to try to discover substructure of what preferences we'd have when building the string) 
-(2) Proofs of correctness to understand why greedy works. "Greedy stays ahead" etc. 
+
+1.  Need more exposure to examples of using greedy methods (it seems like it's a very general and useful technique but requires you to recognise some substructure in the problem for it to work. I think for remove-k you'd have to play around with the problem to try to discover substructure of what preferences we'd have when building the string) 
+2.  Proofs of correctness to understand why greedy works. "Greedy stays ahead" etc. 
 
 It's not like with BFS or DFS where it's as straightforward as mapping the problem to them. 
+
+Basically, for the remove $k$ problem, it really is a search problem. You have a $\binom{n}{k} = \mathcal{O}(n^k)$ search space. But this is too big to do by bruteforce and you sort of have to recognise some substructure that makes your life easier.
+> Similar ideas might come up in combinatorial optimization?
 
 ### Week 7 - Trees - BFS
 
