@@ -165,8 +165,8 @@ Need to revise reasoning about the invariants at play and why sometimes you end 
 | --- | --- |
 | https://leetcode.com/problems/gas-station/description/ | ~~(Baffling, come back later)~~ I don't get why this one is greedy, this really should be a math question and depends on you recognising what the constraints are. The only way I think I could possibly come up with the algorithm on my own is to find conditions for solution existence, then looking at how that constraint affects how one would find a solution. |
 | https://leetcode.com/problems/largest-number/description/ | It's obviously greedy, you want the largest number in the largest positions, but you need a custom comparator to compare things like "3" vs "34" vs "33" as to what's the best position. (Will need to come back to this - can you implement your own parser and sorting algorithms and not rely on Python? You could just strip zeros from the front of the sorted list as well) |
-| https://leetcode.com/problems/remove-duplicate-letters/description/ |  |
-| https://leetcode.com/problems/remove-k-digits/description/ |  |
+| https://leetcode.com/problems/remove-duplicate-letters/description/ |(Come back to it later, since I'm not 100% but the idea seems to be "greedily build result" rather than "delete letters from final string". Probably goes back to idea that _if you have an array, think about finding a one pass solution?_ ) UPDATE: Nope, it's just another monotonic stack. |
+| https://leetcode.com/problems/remove-k-digits/description/ | You want the front of your number to be monotonically increasing, then you just have to deal with the fact that you have to add whatevers left when you run out of deletes. `TODO: Go look at the proof of correctenss that "greedy stays ahead", I've never really seen this` |
 | https://leetcode.com/problems/integer-replacement/description/ |  |
 
 | Practice & apply | Retrospection notes |
@@ -179,7 +179,17 @@ Need to revise reasoning about the invariants at play and why sometimes you end 
 
 
 ### Notes to self: 
-This is a new technique to me, so couldn't solve any of the training questions on the spot.
+This is a new algorithms technique for me.
+
+See COMP3121 lectures if you can find any copies online re: how to recognise greedy. The algorithms are amazingly simple, yet...a lot of cleverness. I think I just need a few more worked examples.
+- For `316` it's the same as `402`. You just have strings that base-26 instead of base-10, the principle of wanting the front of the string to be monotonic increasing is the same. 
+- `719` is basically decreasing lexical sort. So `'9' > '35'` and `'35' > 33 > 3_'` I think. 
+
+I think there's two things for me to do here:
+(1) Need more exposure to examples of using greedy methods (it seems like it's a very general and useful technique but requires you to recognise some substructure in the problem for it to work. I think for remove-k you'd have to play around with the problem to try to discover substructure of what preferences we'd have when building the string) 
+(2) Proofs of correctness to understand why greedy works. "Greedy stays ahead" etc. 
+
+It's not like with BFS or DFS where it's as straightforward as mapping the problem to them. 
 
 ### Week 7 - Trees - BFS
 

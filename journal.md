@@ -226,3 +226,18 @@ I think go back to working on the greedy questions. Leave the "other stuff" like
 
 ### 134
 Spent way too much time on understanding this question. The lesson seems to be: paying attention to constraints on whether solution exists or not, and figuring out how that constraint might affect how you go about finding a solution.
+
+# 2024-06-09 Wed
+
+### 134 
+Proof needs a few tweaks but non urgent
+
+### What we're doing today: 
+Focus on learning the greedy algorithm techniques. No brain space for doing test questions. 
+
+# 2024-06-17 Mon 
+Probably need to be a bit more consistent...
+
+
+### 402
+Right I think all I have the brainpower for today is -- at least understand the intuition of how the algorithm works. Not at all apparent to me how you'd come up with the solution. 
