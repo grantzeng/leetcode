@@ -167,7 +167,7 @@ Need to revise reasoning about the invariants at play and why sometimes you end 
 | https://leetcode.com/problems/largest-number/description/ | It's obviously greedy, you want the largest number in the largest positions, but you need a custom comparator to compare things like "3" vs "34" vs "33" as to what's the best position. (Will need to come back to this - can you implement your own parser and sorting algorithms and not rely on Python? You could just strip zeros from the front of the sorted list as well) |
 | https://leetcode.com/problems/remove-duplicate-letters/description/ |(Come back to it later, since I'm not 100% but the idea seems to be "greedily build result" rather than "delete letters from final string". Probably goes back to idea that _if you have an array, think about finding a one pass solution?_ ) UPDATE: Nope, it's just another monotonic stack. |
 | https://leetcode.com/problems/remove-k-digits/description/ | You want the front of your number to be monotonically increasing, then you just have to deal with the fact that you have to add whatevers left when you run out of deletes. `TODO: Go look at the proof of correctenss that "greedy stays ahead", I've never really seen this` |
-| https://leetcode.com/problems/integer-replacement/description/ |  |
+| https://leetcode.com/problems/integer-replacement/description/ | `TODO: Come back to this, seems like it has both a greedy and a DP solution. Also it looks kinda like Collatz` |
 
 | Practice & apply | Retrospection notes |
 | --- | --- |
