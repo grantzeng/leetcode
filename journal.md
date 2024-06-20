@@ -241,3 +241,10 @@ Probably need to be a bit more consistent...
 
 ### 402
 Right I think all I have the brainpower for today is -- at least understand the intuition of how the algorithm works. Not at all apparent to me how you'd come up with the solution. 
+
+
+# 2024-06-20 Thu 
+
+Proofs for 134 look a bit fishy, come back to later. 
+
+Re: greedy. Probably need to go look up a bit more of the theory. We'll watch a 3121 lecture if can find any.

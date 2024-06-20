@@ -4,8 +4,6 @@ Notes about how to solve each problem/intuitions
 
 ### Week 1 - Arrays - Sliding Window
 
-
-
 | Study solutions | Retrospection notes |
 | --- | --- |
 | https://leetcode.com/problems/maximum-average-subarray-i/description/ | $k$ is fixed so just take window sum and you can compute average at the end. Error cases happen when array is size $< k$; you need to ask what behaviour is expected.  |
@@ -219,7 +217,7 @@ Basically, for the remove $k$ problem, it really is a search problem. You have a
 
 | Study solutions | Retrospection notes |
 | --- | --- |
-| https://leetcode.com/problems/same-tree/description/ |  |
+| https://leetcode.com/problems/same-tree/description/ | Tree must recursively satisfy the equality constraint (just write out the DFS to be explicit about what the cases are) |
 | https://leetcode.com/problems/merge-two-binary-trees/description/ |  |
 | https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/description/ |  |
 | https://leetcode.com/problems/path-sum/description/ |  |
