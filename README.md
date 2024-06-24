@@ -242,6 +242,12 @@ Basically, for the remove $k$ problem, it really is a search problem. You have a
 | https://leetcode.com/problems/maximum-width-of-binary-tree/ |  |
 | https://leetcode.com/problems/serialize-and-deserialize-binary-tree/description/ |  |
 
+
+### Notes on trees
+I will do 105 tomorrow. 
+
+There's many standard tree algorithms, just go learn them. I seem to have less trouble with this topic than others. 
+
 ### Week 11 - Graphs & Matrices - BFS & DFS
 
 | Study solutions - Matrices | Retrospection notes |

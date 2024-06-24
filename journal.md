@@ -254,3 +254,14 @@ Re: greedy. Probably need to go look up a bit more of the theory. We'll watch a 
 Solve them recursively first. 
 
 Not enough brain power today to do them, but most of them are easys. 
+
+
+
+# 2024-06-24 Mon 
+
+### 105 
+I will learn this tomororw it's like a "deserialise a tree"
+
+There's many standard tree algorithms, just go learn them. I seem to have less trouble with this topic than others. 
+
+Trees are useful structures that turn up everywhere. e.g. a DOM is just a tree. hierachies are trees etc. 
