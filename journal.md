@@ -265,3 +265,16 @@ I will learn this tomororw it's like a "deserialise a tree"
 There's many standard tree algorithms, just go learn them. I seem to have less trouble with this topic than others. 
 
 Trees are useful structures that turn up everywhere. e.g. a DOM is just a tree. hierachies are trees etc. 
+
+
+# 2024-06-27 Thu 
+
+### 743 
+Recapping the _informal_ explanation for why/how Dijkstra's works. 
+
+(Generally re how SSSP algorithms work) If we want to go from $u$ to $v$, we could go through $w$ i.e. $d(u, w) \leq d(u, v) + c(u, w)$. 
+- So if our current estimate doesn't meet this we've violated the triangle inequality hence the reassignment of $d(u, w) \leftarrow d(u, v) + c(u, w)$ to relax. 
+ 
+Picking which next neighbour to visit in Dijkstra's
+- Optimal substructure: shortest paths are themselves made of shortest paths, hence we just greedily grab the next node that is closest to us (need to clarify formal statement of this at some point)
+
