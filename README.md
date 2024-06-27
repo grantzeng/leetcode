@@ -244,9 +244,7 @@ Basically, for the remove $k$ problem, it really is a search problem. You have a
 
 
 ### Notes on trees
-I will do 105 tomorrow. 
-
-There's many standard tree algorithms, just go learn them. I seem to have less trouble with this topic than others. 
+There's many standard tree algorithms, just go learn them. 
 
 ### Week 11 - Graphs & Matrices - BFS & DFS
 
@@ -281,7 +279,7 @@ There's many standard tree algorithms, just go learn them. I seem to have less t
 
 | Study solutions | Retrospection notes |
 | --- | --- |
-| https://leetcode.com/problems/network-delay-time/description/ |  |
+| https://leetcode.com/problems/network-delay-time/description/ | Dijkstra's (which is really just a BFS with priorities) and remember how to turn an edge list into an adjacency list |
 | https://leetcode.com/problems/path-with-maximum-probability/description/ |  |
 | https://leetcode.com/problems/word-ladder/description/ |  |
 | https://leetcode.com/problems/cut-off-trees-for-golf-event/description/ |  |
@@ -292,6 +290,8 @@ There's many standard tree algorithms, just go learn them. I seem to have less t
 | https://leetcode.com/problems/cheapest-flights-within-k-stops/description/ |  |
 | https://leetcode.com/problems/critical-connections-in-a-network/description/ |  |
 | https://leetcode.com/problems/shortest-path-to-get-all-keys/description/?envType=list&envId=xler60c5 |  |
+
+
 
 
 ### Week 13 - Potpourri
