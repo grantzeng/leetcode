@@ -227,7 +227,7 @@ Basically, for the remove $k$ problem, it really is a search problem. You have a
 | Practice & apply | Retrospection notes |
 | --- | --- |
 | https://leetcode.com/problems/maximum-depth-of-binary-tree/description/ |  |
-| https://leetcode.com/problems/invert-binary-tree/description/ |  |
+| https://leetcode.com/problems/invert-binary-tree/description/ | (The meme interview question). Inverting is a recursive action: call invert on the children first then do it at the current node; same situation as 543, while you traverse, you might have to also do an operation |
 | https://leetcode.com/problems/path-sum-ii/ |  |
 | https://leetcode.com/problems/binary-tree-maximum-path-sum/description/ |  |
 | https://leetcode.com/problems/sum-root-to-leaf-numbers/description/ |  |
@@ -245,6 +245,8 @@ Basically, for the remove $k$ problem, it really is a search problem. You have a
 
 ### Notes on trees
 There's many standard tree algorithms, just go learn them. 
+
+Idea is that you can save work if you do some operation while you do your tree traversal simultaneously (c.f. invert a binary tree, find diameter of a tree etc.)
 
 ### Week 11 - Graphs & Matrices - BFS & DFS
 
