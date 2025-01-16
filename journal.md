@@ -278,3 +278,22 @@ Recapping the _informal_ explanation for why/how Dijkstra's works.
 Picking which next neighbour to visit in Dijkstra's
 - Optimal substructure: shortest paths are themselves made of shortest paths, hence we just greedily grab the next node that is closest to us (need to clarify formal statement of this at some point)
 
+# 2025-01-07 Tue 
+I can't remember why I stopped this for a bit. I think it was the Haskell course and then frontend taking up a lot of time. 
+
+### 1514
+
+Divine inspiration leads you to take a log (or well it's what engineers tend to do when you have a product and you want to deal with sums)
+
+
+# 2025-01-05 Thu
+
+
+### Thoughts about how to proceed
+Maybe just have to make it a daily habit of solving one every day as warm up to whatever you have to do that day. 
+
+I'm stuck on 1514, I'm going to give it 15 more minutes today, and then I'm looking up the intuition about how to solve it. 
+
+### 1514 - we're still stuck
+
+Probably best to just leave it for now and pick something else to do. I'm not sure why my current solution doesn't work. 

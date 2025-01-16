@@ -280,7 +280,7 @@ There's many standard tree algorithms, just go learn them.
 | Study solutions | Retrospection notes |
 | --- | --- |
 | https://leetcode.com/problems/network-delay-time/description/ | Dijkstra's (which is really just a BFS with priorities) and remember how to turn an edge list into an adjacency list |
-| https://leetcode.com/problems/path-with-maximum-probability/description/ |  |
+| https://leetcode.com/problems/path-with-maximum-probability/description/ | Divine inspiration leads you to take the log of the probabilities because you can get back a triangle inequality and Dijkstra's works again (a log of a probability is always going to be negative as well, y'know)|
 | https://leetcode.com/problems/word-ladder/description/ |  |
 | https://leetcode.com/problems/cut-off-trees-for-golf-event/description/ |  |
 
