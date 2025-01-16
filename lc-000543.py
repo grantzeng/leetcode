@@ -10,6 +10,8 @@ class Solution(object):
         :type root: Optional[TreeNode]
         :rtype: int
         """
+
+
         
 
         """ 
@@ -25,6 +27,14 @@ class Solution(object):
               estimate for diameter, assuming it goes through curr node
             
             - does the height calculation and update to estimate
+
+            Basically a possible naive solution is to: 
+            - BFS to get to every node
+              - then DFS left and right to find diameter estimate assuming
+                diameter gets to curr node 
+            but this is a waste of work so you have to figure out how to do
+            both the traversal and the additional computation simultaneously
+
         """
 
         self.res = 0 
