@@ -297,3 +297,11 @@ I'm stuck on 1514, I'm going to give it 15 more minutes today, and then I'm look
 ### 1514 - we're still stuck
 
 Probably best to just leave it for now and pick something else to do. I'm not sure why my current solution doesn't work. 
+
+
+### 236
+Come back to this algorithm tomorrow morning, not sure if I 100% grok it. 
+
+Basically the idea is try to find the targets first, and then backtrack upwards to the LCA - at which point you only want to return the LCA information. I think if you grok the algorithm you should be able to write it iteratively. 
+
+Will come back to it tomorrow
