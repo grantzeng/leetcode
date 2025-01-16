@@ -221,7 +221,7 @@ Basically, for the remove $k$ problem, it really is a search problem. You have a
 | https://leetcode.com/problems/merge-two-binary-trees/description/ | Doing two DFSs at the same time.  |
 | https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/description/ |  |
 | https://leetcode.com/problems/path-sum/description/ | This is another DFS. Can't call search off early if remaining goes below zero, because no guarantees only positive values |
-| https://leetcode.com/problems/diameter-of-binary-tree/ |  |
+| https://leetcode.com/problems/diameter-of-binary-tree/ | While DFS-ing, update global estimate depending on if estimate of diameter _assuming must go through current node_ is bigger or not |
 | https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/description/ |  |
 
 | Practice & apply | Retrospection notes |
