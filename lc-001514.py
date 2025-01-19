@@ -1,7 +1,83 @@
 class Solution:
     def maxProbability(self, n: int, edges: List[List[int]], succProb: List[float], start_node: int, end_node: int) -> float:
         
+        """
+            Attempt 4 
+            - Using logs to handle loss of precision? 
+        """
+       
+        # 
+        # Basically logging things should handle multiplicative underflows
+        # - but this is a numerical computing problem, the algorithm isn's any substantially different
+        # - also probably doesn't matter in Python 
+        # 
+        
+        adj = defaultdict(list)
 
+        for (u, v), p in zip(edges, succProb): 
+            log_p = math.log(p) if p else -math.inf
+            adj[u].append((v, log_p))
+            adj[v].append((u, log_p)) 
+
+        pq = [(-math.log(1), start_node)] 
+        probs = [-math.inf] * n 
+        probs[start_node] = - math.log(1)
+
+        while pq: 
+            log_p, curr = heapq.heappop(pq)
+            log_p = -log_p 
+
+            if curr == end_node: 
+                return math.exp(log_p) 
+            
+            for nxt, edge_log_p in adj[curr]: 
+                path_log_p = log_p + edge_log_p 
+                if path_log_p > probs[nxt]:
+                    probs[nxt] = path_log_p
+                    heapq.heappush(pq, (-path_log_p, nxt)) 
+        
+        return 0.0
+
+        
+        """
+            Attempt 3
+            - I swear to god you should be able to make the code easier with logs but none of my code is working 
+              so I've given up and looked up a solution
+         
+        """
+        # Strategy: 
+        #
+        # - modified Dijkstra's: maximise probability rather than minimising distance 
+
+        # Map edge list into adjacency matrix 
+        adj = defaultdict(list)
+
+        for (u, v), p in zip(edges, succProb): 
+            adj[u].append((v, p))
+            adj[v].append((u, p)) 
+
+        # Do a modified Dijkstra's
+        # - The issue is you were mistaken about what the weighting in the priority queue represents
+        #   it's not just an edge weight, it's the current best estimate distance to get to an end 
+        # 
+        pq = [(-1, start_node)] # The issue is that default implementation in Python of a heap is a min heap, so just negate all the probabilities
+        probs = [0] * n  # Clearer if it were a dict, but the nodes are all labelled 0 to n anyway 
+        probs[start_node] = 1
+
+        while pq: 
+            p, curr = heapq.heappop(pq)
+            p = -p # Deal with the we-negated-stuff-to-make-a-max-heap-into-a-min-heap
+
+            if curr == end_node: 
+                return p 
+            
+            for nxt, edge_p in adj[curr]: 
+                path_p = p * edge_p 
+                if path_p > probs[nxt]: 
+                    probs[nxt] = path_p
+                    heapq.heappush(pq, (-path_p, nxt)) 
+        
+        return 0.0
 
         """
 
@@ -10,50 +86,43 @@ class Solution:
 
             The issue is how do I use logarithms to avoid the situation with the loss of precision in the multiplication 
         """
-        adj = defaultdict(list)
+        # adj = defaultdict(list)
     
-        for ((u, v), p) in zip(edges, succProb): 
-            # This needs to be log, because we need a max heap
-            # -0.69 < -0.3 so heappop popping the "smallest in negative sense" is just popping max
-            adj[u].append((log(p), v))
-            adj[v].append((log(p), u))
+        # for ((u, v), p) in zip(edges, succProb): 
+        #     # This needs to be log, because we need a max heap
+        #     # -0.69 < -0.3 so heappop popping the "smallest in negative sense" is just popping max
+        #     adj[u].append((log(p), v))
+        #     adj[v].append((log(p), u))
 
-        dist = { start_node : log(1)} # p = 1 
-        pq = [(log(1), start_node)] 
-        visited = set() 
+        # dist = { start_node : log(1)} # p = 1 
+        # pq = [(log(1), start_node)] 
+        # visited = set() 
         
-        while pq: 
-            # Greedily pick the highest probability neighbour
-            wt, curr = heapq.heappop(pq)
+        # while pq: 
+        #     # Greedily pick the highest probability neighbour
+        #     wt, curr = heapq.heappop(pq)
             
-            if curr in visited: 
-                continue
+        #     if curr in visited: 
+        #         continue
             
-            visited.add(curr)
+        #     visited.add(curr)
 
-            if curr == end_node: 
-                # Reached target node
-                return exp(dist[curr])
+        #     if curr == end_node: 
+        #         # Reached target node
+        #         return exp(dist[curr])
 
-            for (nxt_wt, nxt) in adj[curr]: 
-                if nxt in visited: 
-                    continue
+        #     for (nxt_wt, nxt) in adj[curr]: 
+        #         if nxt in visited: 
+        #             continue
                 
-                new_wt = dist[curr] + nxt_wt
+        #         new_wt = dist[curr] + nxt_wt
 
-                if nxt not in dist or new_wt > dist[nxt]: 
-                    dist[nxt] = new_wt
-                    heapq.heappush(pq, (nxt_wt, nxt))
-
-
-        return 0.0
+        #         if nxt not in dist or new_wt > dist[nxt]: 
+        #             dist[nxt] = new_wt
+        #             heapq.heappush(pq, (nxt_wt, nxt))
 
 
-
-
-
-
-
+        # return 0.0
 
 
 

@@ -282,7 +282,7 @@ Idea is that you can save work if you do some operation while you do your tree t
 | Study solutions | Retrospection notes |
 | --- | --- |
 | https://leetcode.com/problems/network-delay-time/description/ | Dijkstra's (which is really just a BFS with priorities) and remember how to turn an edge list into an adjacency list |
-| https://leetcode.com/problems/path-with-maximum-probability/description/ | Divine inspiration leads you to take the log of the probabilities because you can get back a triangle inequality and Dijkstra's works again (a log of a probability is always going to be negative as well, y'know)|
+| https://leetcode.com/problems/path-with-maximum-probability/description/ | Dijkstra's, except with the update rule you're maximising probability, rather than minimising distance. Logs might help with numeric precision. (TODO: Do you _really_ grok what the priorities in the heap represents though?). Also Python's default is a min-heap, so you have to handle that|
 | https://leetcode.com/problems/word-ladder/description/ |  |
 | https://leetcode.com/problems/cut-off-trees-for-golf-event/description/ |  |
 
