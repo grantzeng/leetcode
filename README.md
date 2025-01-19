@@ -293,8 +293,13 @@ Idea is that you can save work if you do some operation while you do your tree t
 | https://leetcode.com/problems/critical-connections-in-a-network/description/ |  |
 | https://leetcode.com/problems/shortest-path-to-get-all-keys/description/?envType=list&envId=xler60c5 |  |
 
+### Notes 
 
+> Dijkstra's algorithm needs a priority queue to find the next node to explore. Nodes are added to the priority queue with their currently-known total distance — their distance acts as their“priority”. A node's priority can later be updated with a new total distance if we find a shorter path to the node.
 
+You've been mistaken about Dijkstra's. It's greedy, but only in the sense that if adding the edge makes the current estimate better then we add it. So that's how it works. The question to you is, why is it obvious that the priorities are current best estimate distances, rather than just the edge weight? Like it's clear you have to consider the accumulated path somehow. 
+
+> Maybe you need to go look at the proof of Dijkstra's to convince yourself it's correct. But for know just know the algorithm so you can use it.
 
 ### Week 13 - Potpourri
 > Added this myself as checklist of non-urgent things to do 
